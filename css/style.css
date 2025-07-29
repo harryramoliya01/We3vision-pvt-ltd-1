@@ -41,6 +41,73 @@
 --------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css);
+/* -------------------------------------------
+
+services menu
+
+------------------------------------------- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  min-width: 1000px; /* Adjust width as needed */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.mega-menu-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: nowrap; /* Keeps columns in a row */
+}
+
+.service-column {
+  flex: 1;
+  min-width: 180px;
+}
+
+.service-column h4 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.service-column ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.service-column ul li {
+  margin-bottom: 8px;
+}
+
+.service-column ul li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+}
+
+.service-column ul li a:hover {
+  text-decoration: underline;
+}
+
+
 
 /* -------------------------------------------
 
