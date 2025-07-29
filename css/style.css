@@ -41,11 +41,147 @@
 --------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css);
+
 /* -------------------------------------------
 
-servives
+company-blog-dropdown 
 
 ------------------------------------------- */
+.drop {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.drop-toggle {
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+}
+
+.drop-toggle .arrow {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.drop-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  min-width: 240px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+/* Hover effect */
+.drop:hover .drop-menu {
+  display: block;
+}
+
+/* Mega menu list styling */
+.drop-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.drop-menu li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.drop-menu li:last-child {
+  border-bottom: none;
+}
+
+.drop-menu li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  display: block;
+}
+
+.drop-menu li a:hover {
+  background-color: #f2f2f2;
+}
+
+/* -------------------------------------------
+
+tech-dropdown 
+
+------------------------------------------- */
+/* Base layout */
+.drop {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.drop-toggle {
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+}
+
+.drop-toggle .arrow {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+/* Dropdown menu styling */
+.drop-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  min-width: 220px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+/* Show dropdown on hover */
+.drop:hover .drop-menu {
+  display: block;
+}
+
+/* Menu list */
+.drop-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.drop-menu li {
+  padding: 8px 16px;
+}
+
+.drop-menu li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  display: block;
+}
+
+.drop-menu li a:hover {
+  background-color: #f2f2f2;
+}
+
+
 /* -------------------------------------------
 services mega menu (larger font + compact layout)
 ------------------------------------------- */
