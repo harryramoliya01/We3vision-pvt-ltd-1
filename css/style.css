@@ -43,9 +43,13 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css);
 /* -------------------------------------------
 
-services menu
+servives
 
 ------------------------------------------- */
+/* -------------------------------------------
+services mega menu (larger font + compact layout)
+------------------------------------------- */
+
 .dropdown {
   position: relative;
 }
@@ -60,10 +64,10 @@ services menu
   top: 100%;
   left: 0;
   background: white;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 14px 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   z-index: 99;
-  min-width: 1000px; /* Adjust width as needed */
+  min-width: 880px;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -72,43 +76,43 @@ services menu
 
 .mega-menu-wrapper {
   display: flex;
-  gap: 40px;
-  flex-wrap: nowrap; /* Keeps columns in a row */
+  gap: 16px;
+  flex-wrap: nowrap;
 }
 
 .service-column {
   flex: 1;
-  min-width: 180px;
+  min-width: 160px;
 }
 
 .service-column h4 {
   margin-top: 0;
-  font-size: 16px;
-  color: #333;
+  font-size: 17px; /* increased heading size */
+  color: #222;
+  font-weight: 600;
 }
 
 .service-column ul {
   list-style: none;
   padding-left: 0;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .service-column ul li {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .service-column ul li a {
   text-decoration: none;
-  color: #444;
-  font-size: 14px;
+  color: #333;
+  font-size: 20px; /* increased link size */
+  font-weight: 500;
 }
 
 .service-column ul li a:hover {
   text-decoration: underline;
+  color: #007BFF; /* optional: highlight on hover */
 }
-
-
-
 /* -------------------------------------------
 
 main
