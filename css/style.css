@@ -8933,6 +8933,7 @@ tech-dropdown
   padding: 10px 0;
   border-radius: 4px;
   z-index: 999;
+  margin-left: 50%;
 }
 
 /* Show dropdown on hover */
@@ -9574,7 +9575,7 @@ Mobile & Tablet Responsive Navigation
     flex-direction: column;
     align-items: flex-start;
     box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
-    padding: 80px 24px 24px 24px;
+    padding: 24px 24px 24px;
     transition: left 0.3s ease-in-out;
     z-index: 2001;
   }
