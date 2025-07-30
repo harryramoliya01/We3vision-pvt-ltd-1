@@ -70,16 +70,15 @@ company-blog-dropdown
 .drop-menu {
   display: none;
   position: absolute;
-  top: 120%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 100%;
+  transform: none;
   background-color: white;
-  min-width: 240px;
+  min-width: 220px;
   border: 1px solid #ddd;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 10px 0;
   border-radius: 4px;
   z-index: 999;
+  margin-left: 50%;
 }
 
 /* Hover effect */
@@ -7280,7 +7279,7 @@ body {
 }
 
 
-/* ─── Zig-Zag Horizontal Timeline ───────────────────────── */
+/* â”€â”€â”€ Zig-Zag Horizontal Timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .timeline {
   position: relative;
@@ -8940,7 +8939,7 @@ tech-dropdown
   padding: 8px 0;
   animation: dropMenuSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   overflow: hidden;
-  margin-left: 10%;
+  margin-left: 50%;
 }
 
 /* Show dropdown on hover */
@@ -8970,85 +8969,6 @@ tech-dropdown
   background-color: #f2f2f2;
 }
 
-
-/* -------------------------------------------
-services mega menu (larger font + compact layout)
-------------------------------------------- */
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-toggle {
-  cursor: pointer;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  padding: 14px 18px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  z-index: 99;
-  min-width: 880px;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.mega-menu-wrapper {
-  display: flex;
-  gap: 16px;
-  flex-wrap: nowrap;
-}
-
-.service-column {
-  flex: 1;
-  min-width: 160px;
-}
-
-.service-column h4 {
-  margin-top: 0;
-  font-size: 17px; /* increased heading size */
-  color: #222;
-  font-weight: 600;
-}
-
-.service-column ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 6px;
-}
-
-.service-column ul li {
-  margin-bottom: 5px;
-}
-
-.service-column ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 20px; /* increased link size */
-  font-weight: 500;
-}
-
-.service-column ul li {
-  margin-bottom: 0px;
-}
-
-.service-column ul li a:hover {
-  text-decoration: underline;
-  color: #007BFF; /* optional: highlight on hover */
-}
-
-.service-column ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 15px; /* reduced link size */
-  font-weight: 400;
-}
 
 /* -------------------------------------------
 
@@ -9109,55 +9029,112 @@ Mobile & Tablet Responsive Navigation
   .menu-toggle span:nth-child(3) {
     transform-origin: center;
   }
+/* -----services responsive *//* 
+rate add karelo css code services ma
 
-  @media (max-width: 768px) {
-  .dropdown-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: auto;
-    bottom: 0;
+MOBILE SIDEBAR DROPDOWN STYLE */
+@media (max-width: 768px) {
+  .header-bar nav {
     width: 100%;
-    max-width: 320px;
-    height: 100vh;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    max-height: 100vh;
     overflow-y: auto;
+    padding: 15px;
+    z-index: 999;
+    border-top: 1px solid #eee;
     display: none;
     flex-direction: column;
-    padding: 20px;
-    background: #fff;
-    z-index: 9999;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-    min-width: unset;
   }
 
-  .dropdown.open .dropdown-menu {
+  .header-bar nav.show {
+    display: flex;
+  }
+
+  .dropdown,
+  .drop {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .dropdown-toggle,
+  .drop-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 12px 15px;
+    background: #eef4fc;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .dropdown-menu,
+  .drop-menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    gap: 12px;
+  }
+
+  .dropdown-menu.show,
+  .drop-menu.show {
     display: flex;
   }
 
   .mega-menu-wrapper {
+    display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
   }
 
   .service-column {
-    min-width: auto;
-    width: 100%;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
   }
 
   .service-column h4 {
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    background: #dfefff;
+    border-radius: 4px;
   }
 
-  .service-column ul li a {
+  .service-column ul {
+    list-style: none;
+    padding-left: 15px;
+    margin: 0;
+  }
+
+  .service-column ul li {
+    padding: 6px 0;
     font-size: 14px;
   }
 
-  /* Optional: override animation lines for clarity on mobile */
-  .design-animation-heading::before,
-  .enterprise-heading::before {
-    display: none;
+  .service-column ul li a {
+    text-decoration: none;
+    color: #444;
   }
+
+  .service-column ul li a:hover {
+    text-decoration: underline;
+  }
+  
 }
+
+
 
   /* Animated hamburger when nav is open */
   nav.open + .menu-toggle span:nth-child(1) {
@@ -9218,7 +9195,7 @@ Mobile & Tablet Responsive Navigation
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .service-columns-grid {
@@ -9281,7 +9258,7 @@ Mobile & Tablet Responsive Navigation
   justify-content: center;
   margin-right: 15px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   animation: iconFloat 3s ease-in-out infinite;
 }
 
@@ -9396,7 +9373,7 @@ Mobile & Tablet Responsive Navigation
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid transparent;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .service-column-list li a::before {
@@ -9446,7 +9423,7 @@ Mobile & Tablet Responsive Navigation
   justify-content: center;
   margin-right: 12px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   animation: iconFloat 3s ease-in-out infinite;
 }
 
@@ -9515,6 +9492,8 @@ Mobile & Tablet Responsive Navigation
     width: 100%;
   }
 }
+
+
 
 /* Hover Effects */
 .service-columns-container:hover {
