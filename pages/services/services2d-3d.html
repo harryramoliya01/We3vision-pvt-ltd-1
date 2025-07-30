@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap grid css -->
+    <link rel="stylesheet" href="/css/plugins/bootstrap-grid.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="/css/plugins/swiper.min.css">
+    <!-- fancybox css -->
+    <link rel="stylesheet" href="/css/plugins/fancybox.min.css">
+    <!-- We3vision Infotech scss -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title> 2D-3D| We3vision Pvt Ltd</title>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        function loadHeader() {
+            fetch('/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+        }
+        loadHeader();
+        document.addEventListener('swup:contentReplaced', loadHeader);
+    </script>
+    <!-- Responsive Header Bar End -->
+    <!-- wrapper -->
+    <div class="mil-wrapper" id="top">
+        <!-- cursor -->
+        <div class="mil-ball">
+            <span class="mil-icon-1">
+                <svg viewBox="0 0 128 128">
+                    <path
+                        d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2 c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2 L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9 z" />
+                </svg>
+            </span>
+            <div class="mil-more-text">More</div>
+            <div class="mil-choose-text">Сhoose</div>
+        </div>
+        <!-- preloader -->
+        <div class="mil-preloader">
+            <div class="mil-preloader-animation">
+                <div class="mil-pos-abs mil-animation-1">
+                    <p class="mil-h3 mil-muted mil-thin">Pioneering</p>
+                    <p class="mil-h3 mil-muted">Creative</p>
+                    <p class="mil-h3 mil-muted mil-thin">Excellence</p>
+                </div>
+                <div class="mil-pos-abs mil-animation-2">
+                    <div class="mil-reveal-frame">
+                        <p class="mil-reveal-box"></p>
+                        <p class="mil-h3 mil-muted mil-thin">We3vision Private Limited</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- scrollbar progress -->
+        <div class="mil-progress-track">
+            <div class="mil-progress"></div>
+        </div>
+        <!-- menu -->
+        <div class="mil-menu-frame">
+            <div class="mil-frame-top">
+                <a href="home-1.html" class="mil-logo">A.</a>
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="mil-menu-content">
+                    <div class="row">
+                        <div class="col-xl-5">
+                            <nav class="mil-main-menu" id="swupMenu">
+                                <ul>
+                                    <li class="mil-has-children">
+                                        <a href="#.">Homepage</a>
+                                        <ul>
+                                            <li><a href="home-1.html">Landing page</a></li>
+                                            <li><a href="home-2.html">Personal</a></li>
+                                            <li><a href="portfolio-3.html">Portfolio slider</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mil-has-children">
+                                        <a href="#.">Portfolio</a>
+                                        <ul>
+                                            <li><a href="portfolio-1.html">Grid type 1</a></li>
+                                            <li><a href="portfolio-2.html">Grid type 2</a></li>
+                                            <li><a href="portfolio-3.html">Slider</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mil-has-children mil-active">
+                                        <a href="#.">Services</a>
+                                        <ul>
+                                            <li><a href="services.html">Services List</a></li>
+                                            <li><a href="service.html">Single service</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mil-has-children">
+                                        <a href="#.">Newsletter</a>
+                                        <ul>
+                                            <li><a href="blog.html">Blog List</a></li>
+                                            <li><a href="publication.html">Publication</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mil-has-children">
+                                        <a href="#.">Other pages</a>
+                                        <ul>
+                                            <li><a href="team.html">Team</a></li>
+                                            <li><a href="/contact.html">Contact</a></li>
+                                            <li><a href="404.html">404</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-xl-7">
+                            <div class="mil-menu-right-frame">
+                                <div class="mil-animation-in">
+                                    <div class="mil-animation-frame">
+                                        <div class="mil-animation mil-position-1 mil-scale" data-value-1="2"
+                                            data-value-2="2"></div>
+                                    </div>
+                                </div>
+                                <div class="mil-menu-right">
+                                    <!-- Add any additional menu content here if needed -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- curtain -->
+        <div class="mil-curtain"></div>
+        <!-- content -->
+        <div class="mil-content">
+            <div id="swupMain" class="mil-main-transition">
+                <!-- Hero Section + Overview -->
+                <div class="mil-inner-banner">
+                    <div class="mil-animation-frame">
+                        <div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="6"
+                            data-value-2="1.4"></div>
+                    </div>
+                    <div class="mil-banner-content mil-up">
+                        <div class="container">
+                            <h1 class="mil-mb-60">Bring Your Ideas to Life with <span class="mil-thin">Eye-Catching 2D &
+                                    3D Animation</span></h1>
+                            <p class="mil-text-xl mil-mb-30">We create simple, engaging animations that help people
+                                understand your message clearly. Whether you need an explainer video, product showcase,
+                                or a fun cartoon – we turn your ideas into visuals that speak to your
+                                audience.<br><br>Our team uses modern tools to design smooth, colorful animations for
+                                websites, presentations, social media, training, and more. No technical talk – just
+                                great-looking videos that get results.</p>
+                                <a href="/contact.html" class="mil-button mil-arrow-place mil-mb-20"><span>Free
+                                    Consultancy</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Process -->
+                <section id="process" class="mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="container mil-p-120-90">
+                            <h2 class="mil-up mil-mb-60" style="color: white; text-align:center;">Our Animation <span
+                                    style="color:#e65cff;">Process</span></h2>
+                            <p style="text-align:center; color:#bdbdd7; max-width:700px; margin:0 auto 48px auto;">We
+                                follow a simple, collaborative process to bring your animation to life—step by step.</p>
+                            <div class="ar-timeline-v2">
+                                <!-- Step 1 -->
+                                <div class="ar-timeline-v2-row left">
+                                    <div class="ar-timeline-v2-content">
+                                        <div class="ar-step-title-v2"><span class="ar-step-num-v2"
+                                                style="color:#e65cff;">01.</span> <span class="ar-step-main">Brief &
+                                                Concept</span></div>
+                                        <div class="ar-step-desc-v2">We understand your goals, audience, and style
+                                            preferences.</div>
+                                    </div>
+                                    <div class="ar-timeline-v2-marker">
+                                        <div class="ar-marker-circle"
+                                            style="background:linear-gradient(135deg,#e65cff,#ff5c8a);"><i
+                                                class="fa fa-pencil-square-o"></i></div>
+                                    </div>
+                                    <div class="ar-timeline-v2-checklist">
+                                        <ul>
+                                            <li>Clarify project goals</li>
+                                            <li>Identify target audience</li>
+                                            <li>Discuss style and tone</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Step 2 -->
+                                <div class="ar-timeline-v2-row right">
+                                    <div class="ar-timeline-v2-checklist">
+                                        <ul>
+                                            <li>Write a clear script</li>
+                                            <li>Create a visual storyboard</li>
+                                        </ul>
+                                    </div>
+                                    <div class="ar-timeline-v2-marker">
+                                        <div class="ar-marker-circle"
+                                            style="background:linear-gradient(135deg,#ff5c8a,#5c9cff);"><i
+                                                class="fa fa-pencil-square-o"></i></div>
+                                    </div>
+                                    <div class="ar-timeline-v2-content">
+                                        <div class="ar-step-title-v2"><span class="ar-step-num-v2"
+                                                style="color:#ff5c8a;">02.</span> <span class="ar-step-main">Script &
+                                                Storyboard</span></div>
+                                        <div class="ar-step-desc-v2">We develop a clear script and create a visual
+                                            storyboard.</div>
+                                    </div>
+                                </div>
+                                <!-- Step 3 -->
+                                <div class="ar-timeline-v2-row left">
+                                    <div class="ar-timeline-v2-content">
+                                        <div class="ar-step-title-v2"><span class="ar-step-num-v2"
+                                                style="color:#5c9cff;">03.</span> <span class="ar-step-main">Design &
+                                                Animation</span></div>
+                                        <div class="ar-step-desc-v2">Our team designs characters, environments, and
+                                            brings everything to life with smooth animations.</div>
+                                    </div>
+                                    <div class="ar-timeline-v2-marker">
+                                        <div class="ar-marker-circle"
+                                            style="background:linear-gradient(135deg,#5c9cff,#5cffb0);"><i
+                                                class="fa fa-pencil-square-o"></i></div>
+                                    </div>
+                                    <div class="ar-timeline-v2-checklist">
+                                        <ul>
+                                            <li>Design characters and backgrounds</li>
+                                            <li>Animate scenes and transitions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Step 4 -->
+                                <div class="ar-timeline-v2-row right">
+                                    <div class="ar-timeline-v2-checklist">
+                                        <ul>
+                                            <li>Add voiceover</li>
+                                            <li>Background music and sound effects</li>
+                                        </ul>
+                                    </div>
+                                    <div class="ar-timeline-v2-marker">
+                                        <div class="ar-marker-circle"
+                                            style="background:linear-gradient(135deg,#5cffb0,#ffd15c);"><i
+                                                class="fa fa-pencil-square-o"></i></div>
+                                    </div>
+                                    <div class="ar-timeline-v2-content">
+                                        <div class="ar-step-title-v2"><span class="ar-step-num-v2"
+                                                style="color:#5cffb0;">04.</span> <span class="ar-step-main">Voiceover &
+                                                Sound</span></div>
+                                        <div class="ar-step-desc-v2">We add voiceovers, background music, and sound
+                                            effects for an immersive experience.</div>
+                                    </div>
+                                </div>
+                                <!-- Step 5 -->
+                                <div class="ar-timeline-v2-row left">
+                                    <div class="ar-timeline-v2-content">
+                                        <div class="ar-step-title-v2"><span class="ar-step-num-v2"
+                                                style="color:#ffd15c;">05.</span> <span class="ar-step-main">Review &
+                                                Delivery</span></div>
+                                        <div class="ar-step-desc-v2">You review the animation, suggest changes, and we
+                                            deliver the final video in your desired format.</div>
+                                    </div>
+                                    <div class="ar-timeline-v2-marker">
+                                        <div class="ar-marker-circle"
+                                            style="background:linear-gradient(135deg,#ffd15c,#5cffe6);"><i
+                                                class="fa fa-pencil-square-o"></i></div>
+                                    </div>
+                                    <div class="ar-timeline-v2-checklist">
+                                        <ul>
+                                            <li>Client review and feedback</li>
+                                            <li>Final delivery in MP4/MOV or your chosen format</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Technologies We Use -->
+                <section class="tech-section mil-p-120-90">
+                    <div class="container">
+                        <h2 class="ar-tech-title"><span style="color:#000000; font-weight:700;">Tools &</span> <span
+                                style="color:#e65cff; font-weight:700;">Technologies</span></h2>
+                        <div class="tech-card-grid">
+                            <div class="tech-card mil-fade-in-up" style="animation-delay: 0.1s;">
+                                <div><img src="/img/technology/Adobeeffect.png" alt="" height="10px"></div>
+                                <div>Adobe After Effects</div>
+                            </div>
+                            <div class="tech-card mil-fade-in-up" style="animation-delay: 0.2s;">
+                                <div><img src="/img/technology/Adobe-Illustrator.png" alt="" height="10px"></div>
+                                <div>Adobe Illustrator</div>
+                            </div>
+                            <div class="tech-card mil-fade-in-up" style="animation-delay: 0.3s;">
+                                <div><img src="/img/technology/Blender.png" alt="" ></div>
+                                <div>Blender</div>
+                            </div>
+                            <div class="tech-card mil-fade-in-up" style="animation-delay: 0.4s;">
+                                <div><img src="/img/technology/maya.png" alt="" height="10px"></div>
+                                <div>Autodesk Maya</div>
+                            </div>
+                            <div class="tech-card mil-fade-in-up" style="animation-delay: 0.5s;">
+                                <div><img src="/img/technology/Cinema4D.png" alt="" height="10px"></div>
+                                <div>Cinema 4D</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Industries We Serve -->
+                <section class="industries-section mil-p-120-90">
+                    <div class="container">
+                        <h2 class="tech-heading">Industries We Serve</h2>
+                        <div class="industries-card-grid">
+                            <div class="industries-card mil-fade-in-up" style="animation-delay: 0.1s;">
+                                <div class="industries-title">Healthcare</div>
+                                <div class="industries-desc">Explaining treatments, procedures, and medical equipment
+                                    through animated videos.</div>
+                            </div>
+                            <div class="industries-card mil-fade-in-up" style="animation-delay: 0.2s;">
+                                <div class="industries-title">Education</div>
+                                <div class="industries-desc">Creating animated e-learning modules for better
+                                    understanding and engagement.</div>
+                            </div>
+                            <div class="industries-card mil-fade-in-up" style="animation-delay: 0.3s;">
+                                <div class="industries-title">Real Estate</div>
+                                <div class="industries-desc">3D walkthroughs and property animations for better client
+                                    presentations.</div>
+                            </div>
+                            <div class="industries-card mil-fade-in-up" style="animation-delay: 0.4s;">
+                                <div class="industries-title">E-commerce</div>
+                                <div class="industries-desc">Showcasing product features and benefits with animated
+                                    demos.</div>
+                            </div>
+                            <div class="industries-card mil-fade-in-up" style="animation-delay: 0.5s;">
+                                <div class="industries-title">Entertainment</div>
+                                <div class="industries-desc">Animated characters and scenes for games, shows, or social
+                                    media content.</div>
+                            </div>
+                            <div class="industries-card mil-fade-in-up" style="animation-delay: 0.6s;">
+                                <div class="industries-title">Corporate</div>
+                                <div class="industries-desc">Training videos, onboarding content, and brand explainers
+                                    for internal use.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Why Choose Us -->
+                <section id="why-choose-us">
+                    <div class="container mil-p-120-90">
+                        <h2 class="mil-up mil-mb-60">Why <span class="mil-thin">Choose Us?</span></h2>
+                        <div class="row">
+                            <div class="col-md-4 mil-mb-30">
+                                <h4 class="mil-up">Skilled animators with years of experience</h4>
+                                <p>Our team brings deep industry experience across 2D and 3D animation, delivering
+                                    polished and professional results.</p>
+                            </div>
+                            <div class="col-md-4 mil-mb-30">
+                                <h4 class="mil-up">High-quality visuals with smooth transitions</h4>
+                                <p>Every project is crafted with attention to detail—resulting in fluid, engaging, and
+                                    visually rich animations.</p>
+                            </div>
+                            <div class="col-md-4 mil-mb-30">
+                                <h4 class="mil-up">Custom design tailored to your brand</h4>
+                                <p>We align every visual element with your brand's tone, style, and audience for a
+                                    cohesive and memorable experience.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mil-mb-30">
+                                <h4 class="mil-up">Affordable pricing for startups and enterprises</h4>
+                                <p>Flexible pricing models ensure quality animation fits your budget—whether you're
+                                    scaling or just starting out.</p>
+                            </div>
+                            <div class="col-md-4 mil-mb-30">
+                                <h4 class="mil-up">Fast turnaround with revision support</h4>
+                                <p>We deliver on time and offer revision rounds so your final video is just right.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Quick Quote / Get in Touch -->
+                <section id="contact-quote" class="mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="container mil-p-120-90">
+                            <div class="mil-center mil-mb-60">
+                                <h2 class="mil-up mil-mb-20" style="color: white;">Ready to bring your story to life?
+                                </h2>
+                                <p class="mil-text-lg mil-mb-20" style="color: white;">Fill out the form or contact us
+                                    directly to get a free consultation.We’ll guide you with ideas, pricing, and
+                                    timeline—no pressure, just friendly help.</p>
+                            </div>
+                            <div class="mil-center">
+                                <a href="/contact.html" class="mil-button mil-arrow-place mil-mb-20 mil-mr-30"><span>Get
+                                        a Free Quote</span></a>
+                                <a href="/contact.html"
+                                    class="mil-button mil-arrow-place mil-mb-20 mil-mr-30"><span>Contact Us
+                                        Now</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- FAQ -->
+                <section id="faq">
+                    <div class="container mil-p-120-90">
+                        <h2 class="mil-up mil-mb-60">Frequently Asked <span class="mil-thin">Questions</span></h2>
+                        <div class="mil-accordion-group mil-up">
+                            <div class="mil-accordion-menu">
+                                <p class="mil-accordion-head">What's the difference between 2D and 3D animation?</p>
+                                <div class="mil-symbol mil-h3">
+                                    <div class="mil-plus">+</div>
+                                    <div class="mil-minus">-</div>
+                                </div>
+                            </div>
+                            <div class="mil-accordion-content">
+                                <p>2D animation is flat and best for explainer videos, while 3D animation gives depth
+                                    and is ideal for realistic product or architectural visuals.</p>
+                            </div>
+                        </div>
+                        <div class="mil-accordion-group mil-up">
+                            <div class="mil-accordion-menu">
+                                <p class="mil-accordion-head">How long does it take to complete an animation project?
+                                </p>
+                                <div class="mil-symbol mil-h3">
+                                    <div class="mil-plus">+</div>
+                                    <div class="mil-minus">-</div>
+                                </div>
+                            </div>
+                            <div class="mil-accordion-content">
+                                <p>It depends on the complexity. A simple 2D explainer can take 1-2 weeks, while a
+                                    detailed 3D animation may take 3-4 weeks.</p>
+                            </div>
+                        </div>
+                        <div class="mil-accordion-group mil-up">
+                            <div class="mil-accordion-menu">
+                                <p class="mil-accordion-head">Can I provide my own script or voiceover?</p>
+                                <div class="mil-symbol mil-h3">
+                                    <div class="mil-plus">+</div>
+                                    <div class="mil-minus">-</div>
+                                </div>
+                            </div>
+                            <div class="mil-accordion-content">
+                                <p>Yes, we can work with your script or voiceover, or help you create both.</p>
+                            </div>
+                        </div>
+                        <div class="mil-accordion-group mil-up">
+                            <div class="mil-accordion-menu">
+                                <p class="mil-accordion-head">Will I be able to suggest changes?</p>
+                                <div class="mil-symbol mil-h3">
+                                    <div class="mil-plus">+</div>
+                                    <div class="mil-minus">-</div>
+                                </div>
+                            </div>
+                            <div class="mil-accordion-content">
+                                <p>Of course! We offer revision rounds so you're happy with the final output.</p>
+                            </div>
+                        </div>
+                        <div class="mil-accordion-group mil-up">
+                            <div class="mil-accordion-menu">
+                                <p class="mil-accordion-head">What formats will I receive the final animation in?</p>
+                                <div class="mil-symbol mil-h3">
+                                    <div class="mil-plus">+</div>
+                                    <div class="mil-minus">-</div>
+                                </div>
+                            </div>
+                            <div class="mil-accordion-content">
+                                <p>You'll get high-quality MP4 or MOV files ready to use on websites, social media, or
+                                    presentations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Place the footer placeholder and script here, INSIDE the Swup container -->
+                <div id="footer-placeholder"></div>
+                <script>
+                    function loadFooter() {
+                        fetch('/footer.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('footer-placeholder').innerHTML = data;
+                            });
+                    }
+                    loadFooter();
+                    document.addEventListener('swup:contentReplaced', loadFooter);
+                </script>
+                <!-- hidden elements -->
+                <div class="mil-hidden-elements">
+                    <div class="mil-dodecahedron">
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
+                        <path
+                            d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
+                    </svg>
+                    <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="mil-lines">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z"
+                            class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z"
+                            class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z"
+                            class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z"
+                            class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z"
+                            class="mil-move" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- wrapper end -->
+    <!-- jQuery js -->
+    <script src="/js/plugins/jquery.min.js"></script>
+    <!-- swup js -->
+    <script src="/js/plugins/swup.min.js"></script>
+    <!-- swiper js -->
+    <script src="/js/plugins/swiper.min.js"></script>
+    <!-- fancybox js -->
+    <script src="/js/plugins/fancybox.min.js"></script>
+    <!-- gsap js -->
+    <script src="/js/plugins/gsap.min.js"></script>
+    <!-- scroll smoother -->
+    <script src="/js/plugins/smooth-scroll.js"></script>
+    <!-- scroll trigger js -->
+    <script src="/js/plugins/ScrollTrigger.min.js"></script>
+    <!-- scroll to js -->
+    <script src="/js/plugins/ScrollTo.min.js"></script>
+    <!-- We3vision Infotech js -->
+    <script src="/js/main.js"></script>
+
+
+</body>
+
+</html>
