@@ -9867,9 +9867,3 @@ body.nav-open::before {
     opacity: 1;
   }
 }
-
-.header-bar nav.open {
-  display: flex;
-  margin-top: 60px;
-  animation: slideDown 0.3s ease-out forwards;
-}
