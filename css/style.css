@@ -5349,6 +5349,10 @@ html.is-animating .mil-menu-frame {
 
   .header-bar nav.open {
     display: flex;
+    display: flex;
+    margin-top: 60px;
+    animation: slideDown 0.3s ease-out forwards;
+
   }
 
   .header-bar nav .dropdown,
