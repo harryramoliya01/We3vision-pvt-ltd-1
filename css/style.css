@@ -229,6 +229,152 @@ services mega menu (larger font + compact layout)
   font-weight: 600;
 }
 
+.service-column h4 {
+  margin-top: 0;
+  font-size: 17px; /* increased heading size */
+  color: #222;
+  font-weight: 600;
+}
+
+/* Specific classes for REBRANDING and DESIGN & ANIMATION */
+.rebranding-heading {
+  margin-bottom: 3px !important;
+  font-weight: 700;
+  font-size: 11px;
+  color: #2A2BC7;
+  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
+  border: 1px solid rgba(42, 43, 199, 0.15);
+}
+
+.design-animation-heading {
+  margin-top: 40px !important;
+  margin-bottom: 3px !important;
+  font-weight: 700;
+  font-size: 11px;
+  color: #2A2BC7;
+  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
+  border: 1px solid rgba(42, 43, 199, 0.15);
+  position: relative;
+}
+
+.design-animation-heading::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2A2BC7, transparent);
+  animation: expandLine 1.5s ease-in-out forwards;
+  border-radius: 1px;
+}
+
+@keyframes expandLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 120px;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    opacity: 0.8;
+  }}
+
+/* Additional classes for METAVERSE TECH and WEB & APP DEVELOPMENT */
+.metaverse-tech-heading {
+  margin-bottom: 3px !important;
+  font-weight: 200;
+  font-size: 11px;
+  color: #2A2BC7;
+  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
+  border: 1px solid rgba(42, 43, 199, 0.15);
+}
+
+.web-app-dev-heading {
+  margin-bottom: 3px !important;
+  font-weight: 200;
+  font-size: 11px;
+  color: #2A2BC7;
+  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
+  border: 1px solid rgba(42, 43, 199, 0.15);
+}
+
+/* Additional classes for GAME DEVELOPMENT and ENTERPRISE */
+.game-development-heading {
+  margin-bottom: 3px !important;
+  font-weight: 200;
+  font-size: 11px;
+  color: #2A2BC7;
+  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
+  border: 1px solid rgba(42, 43, 199, 0.15);
+}
+
+.enterprise-heading {
+  margin-top: 40px !important;
+  margin-bottom: 3px !important;
+  font-weight: 200;
+  font-size: 11px;
+  color: #2A2BC7;
+  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
+  border: 1px solid rgba(42, 43, 199, 0.15);
+  position: relative;
+}
+
+.enterprise-heading::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2A2BC7, transparent);
+  animation: expandLine 1.5s ease-in-out forwards;
+  border-radius: 1px;
+}
+
+/* Additional class for DIGITAL MARKETING */
+.digital-marketing-heading {
+  margin-bottom: 3px !important;
+  font-weight: 200;
+  font-size: 11px;
+  color: #2A2BC7;
+  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
+  border: 1px solid rgba(42, 43, 199, 0.15);
+}
+
 .service-column ul {
   list-style: none;
   padding-left: 0;
@@ -5471,12 +5617,12 @@ html.is-animating .mil-menu-frame {
 
 .chevron-arrow {
   display: inline-block;
-  width: 22px;
-  height: 22px;
-  margin-left: 8px;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
   vertical-align: middle;
-  background: url('data:image/svg+xml;utf8,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L11 14L16 9" stroke="%23222" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
-  background-size: 22px 22px;
+  background: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L6 8L9 5" stroke="%23222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
+  background-size: 12px 12px;
 }
 
 .header-bar .dropdown {
@@ -8876,9 +9022,20 @@ services mega menu (larger font + compact layout)
   font-weight: 500;
 }
 
+.service-column ul li {
+  margin-bottom: 0px;
+}
+
 .service-column ul li a:hover {
   text-decoration: underline;
   color: #007BFF; /* optional: highlight on hover */
+}
+
+.service-column ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px; /* reduced link size */
+  font-weight: 400;
 }
 
 /* -------------------------------------------
@@ -9235,11 +9392,17 @@ Mobile & Tablet Responsive Navigation
 .service-subsection-title {
   font-family: "Inter", sans-serif;
   font-size: 9px;
-  font-weight: 40;
+  font-weight: 700;
   color: #2A2BC7;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 0;
+  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(42, 43, 199, 0.1);
+  border: 1px solid rgba(42, 43, 199, 0.15);
 }
 
 /* Animations */
