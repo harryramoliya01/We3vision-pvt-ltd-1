@@ -1481,3 +1481,7 @@ emailjs.init("LsKNt382V8Rfdzzb4");
 
         // Clear error on input
         form.addEventListener('input', hideError);
+
+document.querySelector('.dropdown-toggle').addEventListener('click', function () {
+  document.querySelector('.dropdown').classList.toggle('open');
+});
