@@ -9611,19 +9611,33 @@ Mobile & Tablet Responsive Navigation
 .mobile-nav {
   position: fixed;
   top: 0;
-  left: -100%;
+  right: -100%;
   width: 80%;
   max-width: 350px;
   height: 100vh;
   background: #fff;
-  z-index: 2002;
-  transition: left 0.3s ease-in-out;
+  z-index: 150;
+  transition: right 0.3s ease-in-out;
   overflow-y: auto;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-nav.wd-opened {
-  left: 0;
+  right: 0;
+}
+
+/* Animation for mobile menu */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav.wd-opened {
+  animation: slideInRight 0.3s ease-out;
 }
 
 /* Search Form */
@@ -9827,9 +9841,9 @@ Mobile & Tablet Responsive Navigation
 }
 
 /* Animation for mobile menu */
-@keyframes slideInLeft {
+@keyframes slideInRight {
   from {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   to {
     transform: translateX(0);
@@ -9837,7 +9851,7 @@ Mobile & Tablet Responsive Navigation
 }
 
 .mobile-nav.wd-opened {
-  animation: slideInLeft 0.3s ease-out;
+  animation: slideInRight 0.3s ease-out;
 }
 
 /* Overlay animation */
@@ -9852,4 +9866,10 @@ body.nav-open::before {
   to {
     opacity: 1;
   }
+}
+
+.header-bar nav.open {
+  display: flex;
+  margin-top: 60px;
+  animation: slideDown 0.3s ease-out forwards;
 }
