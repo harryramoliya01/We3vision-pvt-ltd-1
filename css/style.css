@@ -9494,8 +9494,7 @@ tech-dropdown
 body.menu-open {
   overflow: hidden;
 }
-<<<<<<< HEAD
-}
+
 @media (min-width: 1200px) {
   .mg{
     margin-left: 100px;
