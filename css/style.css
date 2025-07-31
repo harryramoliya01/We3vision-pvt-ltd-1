@@ -8939,7 +8939,7 @@ tech-dropdown
   padding: 8px 0;
   animation: dropMenuSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   overflow: hidden;
-  margin-left: 50%;
+  margin-left: 10%;
 }
 
 /* Show dropdown on hover */
