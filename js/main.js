@@ -1152,6 +1152,48 @@ $(function () {
         // $('.mobile-arrow').not($arrow).removeClass('rotated');
     });
 
+    // Mobile Menu Progress Scroller
+    function updateMobileMenuProgress() {
+        const $content = $('.mobile-menu-content');
+        const $topBar = $('.mobile-menu-progress-top-bar');
+        const $bottomBar = $('.mobile-menu-progress-bottom-bar');
+        
+        if ($content.length && $topBar.length && $bottomBar.length) {
+            const scrollTop = $content.scrollTop();
+            const scrollHeight = $content[0].scrollHeight;
+            const clientHeight = $content[0].clientHeight;
+            const maxScroll = scrollHeight - clientHeight;
+            
+            if (maxScroll > 0) {
+                const scrollPercentage = (scrollTop / maxScroll) * 100;
+                $topBar.css('width', scrollPercentage + '%');
+                $bottomBar.css('width', scrollPercentage + '%');
+            } else {
+                $topBar.css('width', '0%');
+                $bottomBar.css('width', '0%');
+            }
+        }
+    }
+
+    // Initialize progress scroller when mobile menu opens
+    $(document).on('click', '.menu-toggle', function() {
+        setTimeout(function() {
+            updateMobileMenuProgress();
+        }, 300);
+    });
+
+    // Update progress on scroll
+    $(document).on('scroll', '.mobile-menu-content', function() {
+        updateMobileMenuProgress();
+    });
+
+    // Update progress on window resize
+    $(window).on('resize', function() {
+        if ($('.mobile-menu-overlay').hasClass('active')) {
+            updateMobileMenuProgress();
+        }
+    });
+
     // Desktop Dropdown Hover (existing functionality)
     if ($(window).width() > 900) {
         $('.dropdown').hover(
