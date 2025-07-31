@@ -1071,44 +1071,96 @@ $(function () {
 
     ***************************/
     
-    // Menu toggle for mobile
+    // Clean Mobile Menu Toggle
     $('.menu-toggle').on('click', function() {
-        $('.header-bar nav').toggleClass('open');
+        const $this = $(this);
+        const $nav = $('.header-bar nav');
+        const $overlay = $('.mobile-menu-overlay');
+        
+        // Toggle hamburger animation
+        $this.toggleClass('active');
+        
+        // Toggle menu
+        $nav.toggleClass('open');
+        
+        // Add/remove overlay
+        if ($overlay.length === 0) {
+            $('body').append('<div class="mobile-menu-overlay"></div>');
+        }
+        $('.mobile-menu-overlay').toggleClass('active');
+        
+        // Prevent body scroll when menu is open
+        $('body').toggleClass('menu-open');
     });
 
-    // Dropdown toggle functionality
-    $('.dropdown-toggle').on('click', function(e) {
+    // Close menu when clicking overlay
+    $(document).on('click', '.mobile-menu-overlay', function() {
+        $('.menu-toggle').removeClass('active');
+        $('.header-bar nav').removeClass('open');
+        $('.mobile-menu-overlay').removeClass('active');
+        $('body').removeClass('menu-open');
+    });
+
+    // Mobile Dropdown Toggle
+    $(document).on('click', '.dropdown-toggle', function(e) {
         if ($(window).width() <= 900) {
             e.preventDefault();
-            var $dropdown = $(this).closest('.dropdown');
+            const $dropdown = $(this).closest('.dropdown');
+            const $arrow = $(this).find('.arrow');
             
             // Close other dropdowns
-            $('.dropdown').not($dropdown).removeClass('open').removeClass('show');
+            $('.dropdown').not($dropdown).removeClass('open');
+            $('.dropdown').not($dropdown).find('.arrow').removeClass('rotated');
             
             // Toggle current dropdown
-            $dropdown.toggleClass('open').toggleClass('show');
+            $dropdown.toggleClass('open');
+            $arrow.toggleClass('rotated');
         }
     });
 
+    // Desktop Dropdown Hover
+    if ($(window).width() > 900) {
+        $('.dropdown').hover(
+            function() {
+                $(this).addClass('open');
+                $(this).find('.dropdown-menu').addClass('show');
+            },
+            function() {
+                $(this).removeClass('open');
+                $(this).find('.dropdown-menu').removeClass('show');
+            }
+        );
+    }
 
-    $(document).on('click', '.header-bar nav a', function (e) {
-        const href = $(this).attr('href');
-        
-        // Prevent default to allow menu to close first
-        if (href && href !== '#') {
-            e.preventDefault();
+    // Close menu on escape key
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape') {
+            $('.menu-toggle').removeClass('active');
             $('.header-bar nav').removeClass('open');
-            $('.dropdown').removeClass('open show');
-    
-            // Delay navigation slightly to allow classes to be removed
-            setTimeout(() => {
-                window.location.href = href;
-            }, 100); // You can adjust this delay if needed
+            $('.mobile-menu-overlay').removeClass('active');
+            $('body').removeClass('menu-open');
         }
     });
-    
-    
-   
+
+    // Close menu when clicking on links (mobile)
+    $(document).on('click', '.header-bar nav a', function(e) {
+        if ($(window).width() <= 900) {
+            const href = $(this).attr('href');
+            if (href && href !== '#') {
+                // Close menu first
+                $('.menu-toggle').removeClass('active');
+                $('.header-bar nav').removeClass('open');
+                $('.mobile-menu-overlay').removeClass('active');
+                $('body').removeClass('menu-open');
+                
+                // Navigate after a short delay
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 300);
+            }
+        }
+    });
+
     // Mega menu category switching
     $('.mega-menu-categories li').on('click', function() {
         var category = $(this).data('category');
