@@ -1071,54 +1071,77 @@ $(function () {
 
     ***************************/
     
-    // Clean Mobile Menu Toggle
+    // Enhanced Mobile Menu Toggle
     $('.menu-toggle').on('click', function() {
         const $this = $(this);
-        const $nav = $('.header-bar nav');
         const $overlay = $('.mobile-menu-overlay');
         
         // Toggle hamburger animation
         $this.toggleClass('active');
         
-        // Toggle menu
-        $nav.toggleClass('open');
-        
-        // Add/remove overlay
-        if ($overlay.length === 0) {
-            $('body').append('<div class="mobile-menu-overlay"></div>');
-        }
-        $('.mobile-menu-overlay').toggleClass('active');
+        // Toggle mobile menu overlay
+        $overlay.toggleClass('active');
         
         // Prevent body scroll when menu is open
         $('body').toggleClass('menu-open');
     });
 
-    // Close menu when clicking overlay
-    $(document).on('click', '.mobile-menu-overlay', function() {
+    // Close mobile menu when clicking close button
+    $('.mobile-menu-close').on('click', function() {
         $('.menu-toggle').removeClass('active');
-        $('.header-bar nav').removeClass('open');
         $('.mobile-menu-overlay').removeClass('active');
         $('body').removeClass('menu-open');
     });
 
-    // Mobile Dropdown Toggle
-    $(document).on('click', '.dropdown-toggle', function(e) {
-        if ($(window).width() <= 900) {
-            e.preventDefault();
-            const $dropdown = $(this).closest('.dropdown');
-            const $arrow = $(this).find('.arrow');
-            
-            // Close other dropdowns
-            $('.dropdown').not($dropdown).removeClass('open');
-            $('.dropdown').not($dropdown).find('.arrow').removeClass('rotated');
-            
-            // Toggle current dropdown
-            $dropdown.toggleClass('open');
-            $arrow.toggleClass('rotated');
+    // Close menu when clicking overlay background
+    $(document).on('click', '.mobile-menu-overlay', function(e) {
+        if (e.target === this) {
+            $('.menu-toggle').removeClass('active');
+            $('.mobile-menu-overlay').removeClass('active');
+            $('body').removeClass('menu-open');
         }
     });
 
-    // Desktop Dropdown Hover
+    // Mobile Dropdown Toggle for mobile menu
+    $(document).on('click', '.mobile-dropdown-toggle', function(e) {
+        e.preventDefault();
+        const $dropdown = $(this).closest('.mobile-nav-item');
+        const $arrow = $(this).find('.mobile-arrow');
+        const $dropdownMenu = $(this).siblings('.mobile-dropdown-menu');
+        
+        // Close other dropdowns
+        $('.mobile-nav-item').not($dropdown).removeClass('open');
+        $('.mobile-dropdown-toggle').not($(this)).removeClass('active');
+        $('.mobile-dropdown-menu').not($dropdownMenu).removeClass('active');
+        $('.mobile-arrow').not($arrow).removeClass('rotated');
+        
+        // Toggle current dropdown
+        $dropdown.toggleClass('open');
+        $(this).toggleClass('active');
+        $dropdownMenu.toggleClass('active');
+        $arrow.toggleClass('rotated');
+    });
+
+    // H4 Dropdown Toggle for Services sections
+    $(document).on('click', '.mobile-h4-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const $this = $(this);
+        const $h4Dropdown = $this.siblings('.mobile-h4-dropdown');
+        const $arrow = $this.find('.mobile-arrow');
+        
+        // Close other h4 dropdowns
+        $('.mobile-h4-dropdown').not($h4Dropdown).removeClass('active');
+        $('.mobile-h4-toggle').not($this).removeClass('active');
+        $('.mobile-arrow').not($arrow).removeClass('rotated');
+        
+        // Toggle current h4 dropdown
+        $h4Dropdown.toggleClass('active');
+        $this.toggleClass('active');
+        $arrow.toggleClass('rotated');
+    });
+
+    // Desktop Dropdown Hover (existing functionality)
     if ($(window).width() > 900) {
         $('.dropdown').hover(
             function() {
@@ -1136,29 +1159,119 @@ $(function () {
     $(document).on('keydown', function(e) {
         if (e.key === 'Escape') {
             $('.menu-toggle').removeClass('active');
-            $('.header-bar nav').removeClass('open');
             $('.mobile-menu-overlay').removeClass('active');
             $('body').removeClass('menu-open');
         }
     });
 
-    // Close menu when clicking on links (mobile)
-    $(document).on('click', '.header-bar nav a', function(e) {
-        if ($(window).width() <= 900) {
-            const href = $(this).attr('href');
-            if (href && href !== '#') {
-                // Close menu first
-                $('.menu-toggle').removeClass('active');
-                $('.header-bar nav').removeClass('open');
-                $('.mobile-menu-overlay').removeClass('active');
-                $('body').removeClass('menu-open');
-                
-                // Navigate after a short delay
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 300);
-            }
+    // Close menu when clicking on mobile menu links
+    $(document).on('click', '.mobile-nav-link[href]', function(e) {
+        const href = $(this).attr('href');
+        if (href && href !== '#') {
+            // Close menu first
+            $('.menu-toggle').removeClass('active');
+            $('.mobile-menu-overlay').removeClass('active');
+            $('body').removeClass('menu-open');
+            
+            // Navigate after a short delay
+            setTimeout(() => {
+                window.location.href = href;
+            }, 300);
         }
+    });
+
+    // Close menu when clicking on mobile dropdown links
+    $(document).on('click', '.mobile-dropdown-list a', function(e) {
+        const href = $(this).attr('href');
+        if (href && href !== '#') {
+            // Close menu first
+            $('.menu-toggle').removeClass('active');
+            $('.mobile-menu-overlay').removeClass('active');
+            $('body').removeClass('menu-open');
+            
+            // Navigate after a short delay
+            setTimeout(() => {
+                window.location.href = href;
+            }, 300);
+        }
+    });
+
+    // Handle window resize
+    $(window).on('resize', function() {
+        if ($(window).width() > 900) {
+            // Close mobile menu on desktop
+            $('.menu-toggle').removeClass('active');
+            $('.mobile-menu-overlay').removeClass('active');
+            $('body').removeClass('menu-open');
+        }
+    });
+
+    // Smooth scroll for anchor links in mobile menu
+    $(document).on('click', '.mobile-nav-link[href^="#"]', function(e) {
+        e.preventDefault();
+        const target = $(this).attr('href');
+        const $targetElement = $(target);
+        
+        if ($targetElement.length) {
+            // Close mobile menu
+            $('.menu-toggle').removeClass('active');
+            $('.mobile-menu-overlay').removeClass('active');
+            $('body').removeClass('menu-open');
+            
+            // Smooth scroll to target
+            setTimeout(() => {
+                $('html, body').animate({
+                    scrollTop: $targetElement.offset().top - 80
+                }, 800);
+            }, 300);
+        }
+    });
+
+    // Add touch support for mobile devices
+    if ('ontouchstart' in window) {
+        $('.mobile-nav-link, .mobile-dropdown-toggle').on('touchstart', function() {
+            $(this).addClass('touch-active');
+        });
+        
+        $('.mobile-nav-link, .mobile-dropdown-toggle').on('touchend', function() {
+            setTimeout(() => {
+                $(this).removeClass('touch-active');
+            }, 150);
+        });
+    }
+
+    // Enhanced mobile menu animations
+    $('.mobile-menu-overlay').on('transitionend', function() {
+        if ($(this).hasClass('active')) {
+            // Animate menu items when menu opens
+            $('.mobile-nav-item').each(function(index) {
+                const $item = $(this);
+                setTimeout(() => {
+                    $item.addClass('animate-in');
+                }, index * 100);
+            });
+        } else {
+            // Reset animations when menu closes
+            $('.mobile-nav-item').removeClass('animate-in');
+        }
+    });
+
+    // Prevent body scroll when mobile menu is open
+    $('.mobile-menu-overlay').on('touchmove', function(e) {
+        if ($(this).hasClass('active')) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    // Add loading state for mobile menu links
+    $(document).on('click', '.mobile-nav-link[href], .mobile-dropdown-list a[href]', function() {
+        const $link = $(this);
+        $link.addClass('loading');
+        
+        // Remove loading state after navigation
+        setTimeout(() => {
+            $link.removeClass('loading');
+        }, 2000);
     });
 
     // Mega menu category switching
