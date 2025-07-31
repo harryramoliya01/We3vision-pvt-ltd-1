@@ -1969,11 +1969,11 @@ menu
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
 
-/* @media screen and (max-width: 1200px) {
+ @media screen and (max-width: 1200px) {
   .mil-menu-frame .mil-menu-right-frame {
     display: none;
   }
-} */
+} 
 @media screen and (max-height: 800px) {
   .mil-menu-frame .mil-menu-right-frame {
     display: none;
@@ -5286,7 +5286,7 @@ html.is-animating .mil-menu-frame {
 
 
 .dropdown-menu {
-  border-radius: 12px;
+  border-radius: 1px;
   box-shadow: 0 8px 32px rgba(60, 60, 120, 0.12);
   animation: dropdownFadeIn 0.4s cubic-bezier(.77, 0, .18, 1);
 }
@@ -5516,28 +5516,30 @@ html.is-animating .mil-menu-frame {
     padding: 0 12px;
   }
 
-  .header-bar nav {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100vw;
-    background: rgba(255, 255, 255, 0.97);
-    flex-direction: column;
-    align-items: flex-start;
-    display: none;
-    box-shadow: 0 8px 32px rgba(60, 60, 120, 0.10);
-    border-radius: 0 0 18px 18px;
-    padding: 16px 0 24px 0;
-    z-index: 2000;
-  }
+ .header-bar nav {
+  position: fixed;
+  top: 70px;
+  right: 0; /* <-- changed from left: 0 */
+  width: 100%; /* <-- 60% of the screen */
+  background: rgba(255, 255, 255, 0.97);
+  flex-direction: column;
+  align-items: flex-start;
+  display: none;
+  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.10);
+  border-radius: 18px 0 0 18px; /* rounded only on left edge */
+  padding: 16px 0 24px 0;
+  z-index: 2000;
+}
+
 
   .header-bar nav.open {
     display: flex;
+
   }
 
   .header-bar nav .dropdown,
   .header-bar nav a {
-    margin: 0 0 8px 24px;
+    margin : 0 0 8px 24px;
   }
 
   .menu-toggle {
@@ -5608,7 +5610,7 @@ html.is-animating .mil-menu-frame {
 /* Responsive: stack columns on small screens */
 @media (max-width: 900px) {
   .header-bar .dropdown-menu {
-    position: static;
+    position: fixed;
     width: 100%;
     min-height: unset;
     border-radius: 0 0 18px 18px;
@@ -5617,10 +5619,11 @@ html.is-animating .mil-menu-frame {
     flex-direction: column;
     gap: 0;
     overflow-x: visible;
+    display: none; /* Hide by default */
   }
 
   .header-bar .dropdown.open .dropdown-menu {
-    display: flex;
+    display: block;
   }
 }
 
@@ -5632,10 +5635,10 @@ html.is-animating .mil-menu-frame {
 
   .header-bar nav .dropdown,
   .header-bar nav {
-    width: 100%;
+    width: 60%;/*  this is responsible for right side dropdwon */
     margin: 0;
     padding: 12px 24px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #c1c0c0;
   }
 }
 
@@ -7217,7 +7220,7 @@ body {
 }
 
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Zig-Zag Horizontal Timeline Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Zig-Zag Horizontal Timeline ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
 
 .timeline {
   position: relative;
