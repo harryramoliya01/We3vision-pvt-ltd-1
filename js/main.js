@@ -1065,7 +1065,47 @@ $(function () {
 
     });
 
+    /***************************
 
+    Comprehensive dropdown functionality for all pages
+
+    ***************************/
+    
+    // Menu toggle for mobile
+    $('.menu-toggle').on('click', function() {
+        $('.header-bar nav').toggleClass('open');
+    });
+
+    // Dropdown toggle functionality
+    $('.dropdown-toggle').on('click', function(e) {
+        if ($(window).width() <= 900) {
+            e.preventDefault();
+            var $dropdown = $(this).closest('.dropdown');
+            
+            // Close other dropdowns
+            $('.dropdown').not($dropdown).removeClass('open').removeClass('show');
+            
+            // Toggle current dropdown
+            $dropdown.toggleClass('open').toggleClass('show');
+        }
+    });
+
+
+    $(document).on('click', '.header-bar nav a', function (e) {
+        const href = $(this).attr('href');
+        
+        // Prevent default to allow menu to close first
+        if (href && href !== '#') {
+            e.preventDefault();
+            $('.header-bar nav').removeClass('open');
+            $('.dropdown').removeClass('open show');
+    
+            // Delay navigation slightly to allow classes to be removed
+            setTimeout(() => {
+                window.location.href = href;
+            }, 100); // You can adjust this delay if needed
+        }
+    });
     
     
    
@@ -1441,4 +1481,3 @@ emailjs.init("LsKNt382V8Rfdzzb4");
 
         // Clear error on input
         form.addEventListener('input', hideError);
-
