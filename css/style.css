@@ -9298,3 +9298,44 @@ tech-dropdown
 }
 }
 }
+@media (min-width: 1200px) {
+  .mg{
+    margin-left: 100px;
+  }
+  }
+ /* Base dropdown style */
+.drop {
+  position: relative;
+  display: inline-block;
+}
+
+.drop-toggle {
+  cursor: pointer;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.drop .drop-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  min-width: 200px;
+  border: 1px solid #ccc;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Show dropdown on hover (desktop) */
+.drop:hover .drop-menu {
+  display: block;
+}
+
+/* Show on click (mobile) */
+.drop.open .drop-menu {
+  display: block;
+}
