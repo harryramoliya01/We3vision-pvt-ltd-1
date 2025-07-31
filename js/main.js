@@ -1074,28 +1074,6 @@ $(function () {
     // Menu toggle for mobile
     $('.menu-toggle').on('click', function() {
         $('.header-bar nav').toggleClass('open');
-        $(this).toggleClass('active');
-        
-        // Show services mega menu by default on mobile
-        if ($(window).width() <= 900) {
-            $('.header-bar nav .services-mega-menu').show();
-        }
-    });
-
-    // Mobile service column toggle functionality
-    $(document).on('click', '.header-bar nav .service-column h4', function(e) {
-        if ($(window).width() <= 900) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            var $serviceColumn = $(this).closest('.service-column');
-            
-            // Close other service columns
-            $('.header-bar nav .service-column').not($serviceColumn).removeClass('open');
-            
-            // Toggle current service column
-            $serviceColumn.toggleClass('open');
-        }
     });
 
     // Dropdown toggle functionality
