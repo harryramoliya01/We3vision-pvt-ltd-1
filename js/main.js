@@ -1109,6 +1109,11 @@ $(function () {
         const $arrow = $(this).find('.mobile-arrow');
         const $dropdownMenu = $(this).siblings('.mobile-dropdown-menu');
         
+        // Don't close if clicking on h4 toggles
+        if ($(e.target).closest('.mobile-h4-toggle').length) {
+            return;
+        }
+        
         // Close other dropdowns
         $('.mobile-nav-item').not($dropdown).removeClass('open');
         $('.mobile-dropdown-toggle').not($(this)).removeClass('active');
@@ -1130,15 +1135,21 @@ $(function () {
         const $h4Dropdown = $this.siblings('.mobile-h4-dropdown');
         const $arrow = $this.find('.mobile-arrow');
         
-        // Close other h4 dropdowns
-        $('.mobile-h4-dropdown').not($h4Dropdown).removeClass('active');
-        $('.mobile-h4-toggle').not($this).removeClass('active');
-        $('.mobile-arrow').not($arrow).removeClass('rotated');
+        console.log('H4 toggle clicked:', $this.text());
+        console.log('Dropdown element:', $h4Dropdown);
+        console.log('Current active state:', $h4Dropdown.hasClass('active'));
         
         // Toggle current h4 dropdown
         $h4Dropdown.toggleClass('active');
         $this.toggleClass('active');
         $arrow.toggleClass('rotated');
+        
+        console.log('After toggle - active state:', $h4Dropdown.hasClass('active'));
+        
+        // Optional: Close other h4 dropdowns (uncomment if you want accordion behavior)
+        // $('.mobile-h4-dropdown').not($h4Dropdown).removeClass('active');
+        // $('.mobile-h4-toggle').not($this).removeClass('active');
+        // $('.mobile-arrow').not($arrow).removeClass('rotated');
     });
 
     // Desktop Dropdown Hover (existing functionality)
