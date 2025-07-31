@@ -1065,92 +1065,7 @@ $(function () {
 
     });
 
-    /***************************
 
-    Comprehensive dropdown functionality for all pages
-
-    ***************************/
-    
-    // Menu toggle for mobile
-    $('.menu-toggle').on('click', function() {
-        $('.header-bar nav').toggleClass('open');
-    });
-
-    // Dropdown toggle functionality
-    $('.dropdown-toggle').on('click', function(e) {
-        if ($(window).width() <= 900) {
-            e.preventDefault();
-            var $dropdown = $(this).closest('.dropdown');
-            
-            // Close other dropdowns
-            $('.dropdown').not($dropdown).removeClass('open').removeClass('show');
-            
-            // Toggle current dropdown
-            $dropdown.toggleClass('open').toggleClass('show');
-        }
-    });
-
-    // Clickable REBRANDING heading functionality
-    $(document).on('click', '.clickable-heading', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        var $heading = $(this);
-        var category = $heading.data('category');
-        var $services;
-        
-        // Determine which services to toggle based on category
-        if (category === 'rebranding') {
-            $services = $heading.siblings('.rebranding-services');
-        } else if (category === 'design-animation') {
-            $services = $heading.siblings('.design-animation-services');
-        } else if (category === 'metaverse-tech') {
-            $services = $heading.siblings('.metaverse-tech-services');
-        } else if (category === 'web-app-dev') {
-            $services = $heading.siblings('.web-app-dev-services');
-        } else if (category === 'game-development') {
-            $services = $heading.siblings('.game-development-services');
-        } else if (category === 'enterprise') {
-            $services = $heading.siblings('.enterprise-services');
-        } else if (category === 'digital-marketing') {
-            $services = $heading.siblings('.digital-marketing-services');
-        }
-        
-        // Toggle active state
-        $heading.toggleClass('active');
-        
-        // Toggle services visibility
-        if ($services && $services.hasClass('show')) {
-            $services.removeClass('show');
-        } else if ($services) {
-            $services.addClass('show');
-        }
-    });
-
-    // Close dropdowns when clicking outside
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest('.clickable-heading, .rebranding-services, .design-animation-services, .metaverse-tech-services, .web-app-dev-services, .game-development-services, .enterprise-services, .digital-marketing-services').length) {
-            $('.clickable-heading').removeClass('active');
-            $('.rebranding-services, .design-animation-services, .metaverse-tech-services, .web-app-dev-services, .game-development-services, .enterprise-services, .digital-marketing-services').removeClass('show');
-        }
-    });
-
-
-    $(document).on('click', '.header-bar nav a', function (e) {
-        const href = $(this).attr('href');
-        
-        // Prevent default to allow menu to close first
-        if (href && href !== '#') {
-            e.preventDefault();
-            $('.header-bar nav').removeClass('open');
-            $('.dropdown').removeClass('open show');
-    
-            // Delay navigation slightly to allow classes to be removed
-            setTimeout(() => {
-                window.location.href = href;
-            }, 100); // You can adjust this delay if needed
-        }
-    });
     
     
    
@@ -1526,8 +1441,4 @@ emailjs.init("LsKNt382V8Rfdzzb4");
 
         // Clear error on input
         form.addEventListener('input', hideError);
-
-document.querySelector('.dropdown-toggle').addEventListener('click', function () {
-  document.querySelector('.dropdown').classList.toggle('open');
-});
 
