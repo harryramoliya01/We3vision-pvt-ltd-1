@@ -2,1166 +2,56 @@
 <html lang="zxx">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <!-- bootstrap grid css -->
-    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/plugins/bootstrap-grid.css">
     <!-- font awesome css -->
-    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
     <!-- swiper css -->
-    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="/css/plugins/swiper.min.css">
     <!-- fancybox css -->
-    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <link rel="stylesheet" href="/css/plugins/fancybox.min.css">
     <!-- We3vision Infotech scss -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- page name -->
-    <title>We3vision Private Limited</title>
-    
-    <!-- Custom Privacy Policy Styles -->
-    <style>
-        /* Modern Vibrant Design */
-        :root {
-            --primary-color: #0ea5e9;
-            --secondary-color: #8b5cf6;
-            --accent-color: #f97316;
-            --success-color: #10b981;
-            --warning-color: #f59e0b;
-            --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8fafc;
-            --bg-tertiary: #f1f5f9;
-            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --border-color: #e2e8f0;
-            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Privacy Hero Section - Vibrant */
-        .privacy-hero {
-            background: var(--bg-gradient);
-            position: relative;
-            overflow: hidden;
-            color: white;
-        }
-        
-        .privacy-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse"><polygon points="25,2 47,13.4 47,36.6 25,48 3,36.6 3,13.4" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23hexagons)"/></svg>');
-            opacity: 0.3;
-        }
-        
-        .privacy-icon {
-            font-size: 4rem;
-            color: white;
-            margin-bottom: 25px;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        
-        .privacy-stats {
-            margin-top: 50px;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            margin: 8px;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .stat-item:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.25);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 8px;
-            font-weight: 800;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        
-        .stat-item p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1rem;
-            margin: 0;
-            font-weight: 600;
-        }
-        
-        /* Navigation Cards - Glassmorphism */
-        .privacy-nav-cards {
-            margin-bottom: 70px;
-        }
-        
-        .nav-card {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 24px;
-            padding: 30px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            margin-bottom: 25px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .nav-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: 1;
-        }
-        
-        .nav-card:hover::before {
-            opacity: 1;
-        }
-        
-        .nav-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--primary-color);
-        }
-        
-        .nav-card.active {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            border-color: var(--primary-color);
-        }
-        
-        .nav-card.active .card-icon,
-        .nav-card.active h4,
-        .nav-card.active p {
-            color: white;
-        }
-        
-        .nav-card > * {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-card:hover .card-icon {
-            color: white;
-        }
-        
-        .nav-card h4 {
-            color: var(--text-primary);
-            margin-bottom: 10px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-card:hover h4 {
-            color: white;
-        }
-        
-        .nav-card p {
-            color: var(--text-secondary);
-            margin: 0;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-card:hover p {
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        /* Privacy Sections - Modern Cards */
-        .privacy-section {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 40px;
-            margin-bottom: 35px;
-            transition: all 0.4s ease;
-            box-shadow: var(--shadow-md);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .privacy-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-        }
-        
-        .privacy-section:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .section-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--bg-tertiary);
-        }
-        
-        .section-icon {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-right: 20px;
-            box-shadow: var(--shadow-md);
-        }
-        
-        .section-header h2 {
-            color: var(--text-primary);
-            margin: 0;
-            font-weight: 800;
-            font-size: 1.8rem;
-        }
-        
-        .section-content {
-            line-height: 1.8;
-            color: var(--text-secondary);
-        }
-        
-        .section-content p {
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-            color: var(--text-primary);
-        }
-        
-        .section-content h4 {
-            color: var(--primary-color);
-            margin: 30px 0 15px 0;
-            font-weight: 700;
-            font-size: 1.3rem;
-        }
-        
-        .section-content ul {
-            margin: 20px 0;
-            padding-left: 25px;
-        }
-        
-        .section-content li {
-            margin-bottom: 10px;
-            color: var(--text-primary);
-        }
-        
-        /* Info Grid - Modern Cards */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .info-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 25px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .info-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        
-        .info-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .info-card:hover {
-            background: var(--bg-primary);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-color);
-        }
-        
-        .info-card h4 {
-            color: var(--text-primary);
-            margin-bottom: 15px;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-        
-        .info-card h4 i {
-            margin-right: 10px;
-            color: var(--primary-color);
-        }
-        
-        .info-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .info-card li {
-            padding: 6px 0;
-            color: var(--text-secondary);
-            position: relative;
-            padding-left: 25px;
-            font-size: 0.95rem;
-        }
-        
-        .info-card li:before {
-            content: "✦";
-            color: var(--accent-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        /* Timeline - Modern Design */
-        .usage-timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        .usage-timeline:before {
-            content: "";
-            position: absolute;
-            left: 15px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color), var(--accent-color));
-            border-radius: 2px;
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-            padding-left: 35px;
-        }
-        
-        .timeline-icon {
-            position: absolute;
-            left: -18px;
-            top: 0;
-            background: var(--bg-primary);
-            color: var(--primary-color);
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            border: 3px solid var(--primary-color);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .timeline-content h4 {
-            color: var(--text-primary);
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .timeline-content p {
-            color: var(--text-secondary);
-            margin: 0;
-            font-size: 0.95rem;
-        }
-        
-        /* Security Features - Grid Layout */
-        .security-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .security-item {
-            text-align: center;
-            padding: 25px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .security-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--success-color), var(--primary-color));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .security-item:hover::before {
-            opacity: 0.1;
-        }
-        
-        .security-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            background: var(--bg-primary);
-        }
-        
-        .security-item > * {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .security-icon {
-            font-size: 2.2rem;
-            color: var(--success-color);
-            margin-bottom: 15px;
-        }
-        
-        .security-item h4 {
-            color: var(--text-primary);
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .security-item p {
-            color: var(--text-secondary);
-            margin: 0;
-            font-size: 0.9rem;
-        }
-        
-        /* Rights Grid - Modern Cards */
-        .rights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .right-card {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .right-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--accent-color), var(--warning-color));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .right-card:hover::before {
-            opacity: 0.1;
-        }
-        
-        .right-card:hover {
-            border-color: var(--accent-color);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .right-card > * {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .right-icon {
-            font-size: 2.2rem;
-            color: var(--accent-color);
-            margin-bottom: 15px;
-        }
-        
-        .right-card h4 {
-            color: var(--text-primary);
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .right-card p {
-            color: var(--text-secondary);
-            margin: 0;
-            font-size: 0.9rem;
-        }
-        
-        /* Contact Cards - Modern Design */
-        .contact-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .contact-card {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .contact-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        
-        .contact-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--primary-color);
-        }
-        
-        .contact-icon {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-        
-        .contact-card h4 {
-            margin-bottom: 10px;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-        
-        .contact-card a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .contact-card a:hover {
-            text-decoration: underline;
-        }
-        
-        .contact-card p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-        }
-        
-        /* Sidebar - Glassmorphism */
-        .privacy-sidebar {
-            position: sticky;
-            top: 100px;
-        }
-        
-        .sidebar-widget {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: all 0.4s ease;
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .sidebar-widget:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .sidebar-widget h4 {
-            color: var(--text-primary);
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        .download-btn, .help-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            text-decoration: none;
-            padding: 15px 25px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            box-shadow: var(--shadow-md);
-        }
-        
-        .download-btn:hover, .help-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-            color: white;
-            text-decoration: none;
-        }
-        
-        .download-btn i, .help-btn i {
-            margin-right: 10px;
-        }
-        
-        .commitment-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            color: var(--text-secondary);
-            padding: 10px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .commitment-item:hover {
-            background: var(--bg-secondary);
-            transform: translateX(5px);
-        }
-        
-        .commitment-item i {
-            color: var(--success-color);
-            margin-right: 10px;
-            font-size: 1.1rem;
-        }
-        
-        /* Privacy Footer - Modern */
-        .privacy-footer {
-            text-align: center;
-            padding: 30px;
-            background: var(--bg-gradient);
-            color: white;
-            border-radius: 20px;
-            margin-top: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .privacy-footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
-            opacity: 0.3;
-        }
-        
-        .privacy-footer p {
-            color: white;
-            margin: 0;
-            font-weight: 600;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Enhanced Typography */
-        .section-content strong {
-            color: var(--primary-color);
-            font-weight: 700;
-        }
-        
-        .section-content em {
-            color: var(--accent-color);
-            font-style: italic;
-        }
-        
-        /* Policy Summary Styles */
-        .policy-summary {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 35px;
-        }
-        
-        .policy-summary h2 {
-            color: var(--text-primary);
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-        
-        .policy-summary p {
-            color: var(--text-primary);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        /* Commitment Box */
-        .commitment-box {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            border-radius: 20px;
-            padding: 25px;
-            margin: 25px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .commitment-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse"><polygon points="25,2 47,13.4 47,36.6 25,48 3,36.6 3,13.4" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23hexagons)"/></svg>');
-            opacity: 0.2;
-        }
-        
-        .commitment-box h4 {
-            color: white;
-            margin-bottom: 15px;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .commitment-box p {
-            color: rgba(255, 255, 255, 0.9);
-            margin: 0;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .privacy-icon {
-                font-size: 3.5rem;
-            }
-            
-            .stat-item h3 {
-                font-size: 2.2rem;
-            }
-            
-            .nav-card {
-                margin-bottom: 20px;
-            }
-            
-            .privacy-section {
-                padding: 30px;
-            }
-            
-            .section-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .section-icon {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-            
-            .info-grid, .security-features, .rights-grid, .contact-cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .usage-timeline {
-                padding-left: 25px;
-            }
-            
-            .timeline-item {
-                padding-left: 30px;
-            }
-            
-            .privacy-sidebar {
-                position: static;
-                margin-top: 35px;
-            }
-        }
-        
-        /* Enhanced Mobile Styles */
-        @media (max-width: 576px) {
-            .privacy-section {
-                padding: 25px;
-                margin-bottom: 25px;
-            }
-            
-            .section-header h2 {
-                font-size: 1.6rem;
-            }
-            
-            .nav-card {
-                padding: 25px 20px;
-            }
-            
-            .card-icon {
-                font-size: 2.2rem;
-            }
-            
-            .contact-cards {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .contact-card {
-                padding: 25px 20px;
-            }
-        }
-        
-        /* Print Styles */
-        @media print {
-            .privacy-nav-cards,
-            .privacy-sidebar,
-            .nav-card,
-            .sidebar-widget {
-                display: none;
-            }
-            
-            .privacy-section {
-                box-shadow: none;
-                border: 1px solid #ddd;
-                page-break-inside: avoid;
-            }
-            
-            .section-header {
-                border-bottom: 1px solid #ddd;
-            }
-            
-            .contact-cards {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Dark Mode Support */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text-primary: #f1f5f9;
-                --text-secondary: #cbd5e1;
-                --bg-primary: #0f172a;
-                --bg-secondary: #1e293b;
-                --bg-tertiary: #334155;
-                --border-color: #334155;
-            }
-            
-            .privacy-hero {
-                background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            }
-            
-            .nav-card {
-                background: rgba(30, 41, 59, 0.9);
-                border-color: rgba(255, 255, 255, 0.1);
-            }
-            
-            .sidebar-widget {
-                background: rgba(30, 41, 59, 0.9);
-                border-color: rgba(255, 255, 255, 0.1);
-            }
-        }
-        
-        body {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            margin: 0;
-            padding: 0;
-        }
-        
-        .container.mil-p-120-30 {
-            max-width: none !important;
-            width: 100vw;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .privacy-section {
-            border-radius: 0 !important;
-            margin-bottom: 0 !important;
-            box-shadow: none !important;
-            padding-left: 8vw !important;
-            padding-right: 8vw !important;
-            padding-top: 48px !important;
-            padding-bottom: 48px !important;
-        }
-        
-        .privacy-section:first-child {
-            padding-top: 64px !important;
-        }
-        
-        .privacy-section:last-child {
-            padding-bottom: 64px !important;
-        }
-        
-        .section-header {
-            border-radius: 0 !important;
-        }
-        
-        .privacy-footer {
-            border-radius: 0 !important;
-            margin-top: 0 !important;
-        }
-        
-        .privacy-nav-cards, .contact-cards, .info-grid, .security-features, .rights-grid {
-            border-radius: 0 !important;
-        }
-        
-        @media (max-width: 900px) {
-            .privacy-section {
-                padding-left: 2vw !important;
-                padding-right: 2vw !important;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .privacy-section {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-                padding-top: 32px !important;
-                padding-bottom: 32px !important;
-            }
-        }
-    </style>
-
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Privacy Policy | We3vision Pvt Ltd</title>
 </head>
 
 <body>
-    <!--------------------------------------------------------------------------------------------------------------------->
-    <div class="header-bar">
-        <div class="logo" ><img src="/img/logo/logo_transparent.png" alt="" height="40px" width="45px"></div>
-        <button class="menu-toggle" aria-label="Open menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav>
-          <div class="dropdown">
-            <a href="/index.html" class="dropdown-toggle" id="homeDropdown">Home</a>
-          </div>
-          <div class="dropdown">
-          <a href="/about.html" class="dropdown-toggle">About Us</a></div>
-          <div class="dropdown" id="servicesDropdown">
-        <a href="#" class="dropdown-toggle">Services <span class="arrow">▾</span></a>
-        <div class="dropdown-menu mega-menu services-mega-menu">
-          <div class="mega-menu-wrapper">
-      
-            <!-- Design & Animation -->
-            <div class="service-column">
-               <!-- Rebranding -->
-               <h4 class="rebranding-heading">REBRANDING</h4>
-              <ul>
-                <li><a href="/pages/services/servicesRedesign.html">Website Redesign</a></li>
-                <li><a href="/pages/services/servicesBrandIdentity.html">Brand Identity</a></li>
-                <li><a href="/pages/services/servicesTechnologyMigration.html">Tech Migration</a></li>
-              </ul>
-              
-              <h4 class="design-animation-heading">DESIGN & ANIMATION</h4>
-              <ul>
-                <li><a href="/pages/services/services2d-3d.html">2D & 3D Animation</a></li>
-                <li><a href="/pages/services/servicesCGI.html">CGI & Video Production</a></li>
-                <li><a href="/pages/services/servicesGraphics.html">Graphics & UI/UX Design</a></li>
-              </ul>
-              <BR>
-            </div>
-      
-            <!-- Immersive Technologies -->
-            <div class="service-column">
-              <h4 class="metaverse-tech-heading">METAVERSE TECH</h4>
-              <ul>
-                <li><a href="/pages/services/servicesAR.html">AR (Augmented Reality)</a></li>
-                <li><a href="/pages/services/servicesVR.html">VR (Virtual Reality)</a></li>
-                <li><a href="/pages/services/servicesXR.html">XR (Extended Reality)</a></li>
-                <li><a href="/pages/services/servicesMR.html">MR (Mixed Reality)</a></li>
-                <li><a href="/pages/services/servicesMetaverseSolution.html">Metaverse Solutions</a></li>
-                <li><a href="/pages/services/servicesNftGameDevlopment.html">NFT Game Development</a></li>
-                <li><a href="/pages/services/servicesNftMarketPlace.html">NFT Marketplace</a></li>
-                <li><a href="/pages/services/servicesImmersive.html">Immersive Marketing</a></li>          
-                <li><a href="/pages/services/servicesMetaverseGameDevlopment.html">Metaverse Games</a></li>
-              </ul>
-            </div>
-      
-            <!-- Web & App Development -->
-            <div class="service-column">
-              <h4 class="web-app-dev-heading">WEB/APP DEVELOPMENT</h4>
-              <ul>
-                <li><a href="/pages/services/servicesWeb.html">Web Development</a></li>
-                <li><a href="/pages/services/servicesMobile.html">Mobile App Development</a></li>
-                <li><a href="/pages/services/servicesSoft.html">Software Development</a></li>
-                <li><a href="/pages/services/servicesLow.html">Low Code / No Code</a></li>
-                <li><a href="/pages/services/servicesErpDevlopment.html">Custom ERP Software</a></li>
-                <li><a href="/pages/services/servicesSaas.html">SaaS Development</a></li>
-                <li><a href="/pages/services/servicesShopify.html">Shopify Development</a></li>
-                <li><a href="/pages/services/servicesWordpress.html">WordPress Development</a></li>
-                <li><a href="/pages/services/servicesAIdev.html">AI Development</a></li>
-              </ul>
-            </div>
-      
-      
-            <!-- Game Dev + Enterprise -->
-            <div class="service-column">
-              <h4 class="game-development-heading">GAME DEVELOPMENT</h4>
-              <ul>
-                <li><a href="/pages/services/servicesAndroidGameDevlopment.html">Android Games</a></li>
-                <li><a href="/pages/services/servicesIosGameDevlopment.html">iOS Games</a></li>
-              </ul>
-              <h4 class="enterprise-heading">ENTERPRISE</h4>
-              <ul>
-                <li><a href="/pages/services/servicesCrmDevlopment.html">CRM Development</a></li>
-                <li><a href="/pages/services/servicesErpDevlopment.html">ERP Development</a></li>
-                <li><a href="/pages/services/servicesDevlopment.html">Custom Development</a></li>
-              </ul>
-            </div>
-      
-            <!-- Marketing + Rebranding -->
-            <div class="service-column">
-              <h4 class="digital-marketing-heading">DIGITAL MARKETING</h4>
-              <ul>
-                <li><a href="/pages/services/servicesSeoSearchEngine.html">SEO Optimization</a></li>
-                <li><a href="/pages/services/servicesDigitalMarketing.html">Marketing Strategy</a></li>
-                <li><a href="/pages/services/servicesImmersiveMarketing.html">Immersive Marketing</a></li>
-              </ul>
-             
-            </div>
-      
-          </div>
-        </div>
-      </div>
-      
-          <div class="drop">
-        <a href="#" class="drop-toggle">Technologies <span class="arrow">▾</span></a>
-        <div class="drop-menu">
-          <ul>
-            <li><a href="/pages/technologies/technoDesign.html">Design & Animation</a></li>
-            <li><a href="/pages/technologies/technoWeb.html">Web & App Development</a></li>
-            <li><a href="/pages/technologies/technoImmersive.html">Immersive Technologies</a></li>
-            <li><a href="/pages/technologies/technoGame.html">Game Development</a></li>
-            <li><a href="/pages/technologies/technoEnterprise.html">Enterprise Solutions</a></li>
-            <li><a href="/pages/technologies/technoDigital.html">Digital Marketing</a></li>
-            <li><a href="/pages/technologies/technoRebranding.html">Rebranding</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <!-- Portfolio Link (No dropdown) -->
-      <div class="drop">
-        <a href="/pages/portfolio/portfolio-1.html" class="drop-toggle">
-          <span>Portfolio</span>
-        </a>
-      </div>
-      
-      <!-- Blog with Hover Dropdown -->
-      <div class="drop" id="blogDrop">
-        <a href="#" class="drop-toggle">
-          <span>Blog</span><span class="arrow">▾</span>
-        </a>
-        <div class="drop-menu" id="blogDropMenu">
-          <ul>
-            <li class="active"><a href="/blog.html">Blog List</a></li>
-            <li><a href="/publication.html">Publication</a></li>
-          </ul>
-        </div>
-      </div>
-      
-         <!-- Company Dropdown -->
-      <div class="drop" id="companyDrop">
-        <a href="#" class="drop-toggle">
-          <span>Company</span><span class="arrow">▾</span>
-        </a>
-        <div class="drop-menu" id="companyDropMenu">
-          <ul>
-            <li class="active"><a href="/contact.html">Contact Us</a></li>
-            <li><a href="/careers.html">Careers</a></li>
-            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      
-          <div class="dropdown">
-          <a href="/enquiry.html" class="quick-enquiry-btn">
-              <span class="qe-text">QUICK ENQUIRY</span>
-              <span class="qe-circle">
-                <svg  viewBox="0 0 48 48" fill="none">
-                  <path d="M18 24H34M34 24L29 19M34 24L29 29" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-          </a>
-        </div>
-        </nav>
-      </div>
+    <div id="header-placeholder"></div>
+    <script>
+        function loadHeader() {
+            fetch('/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+        }
+        loadHeader();
+        document.addEventListener('swup:contentReplaced', loadHeader);
+    </script>
     <!-- Responsive Header Bar End -->
-    <!--------------------------------------------------------------------------------------------------------------------->
     <!-- wrapper -->
     <div class="mil-wrapper" id="top">
-
         <!-- cursor -->
         <div class="mil-ball">
             <span class="mil-icon-1">
                 <svg viewBox="0 0 128 128">
                     <path
-                        d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2	c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2	L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9	z" />
+                        d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2 c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2 L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9 z" />
                 </svg>
             </span>
             <div class="mil-more-text">More</div>
             <div class="mil-choose-text">Сhoose</div>
         </div>
-        <!-- cursor end -->
-
         <!-- preloader -->
-        <!-- <div class="mil-preloader">
+        <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
-                    <p class="mil-h3 mil-muted mil-thin">Building </p>
-                    <p class="mil-h3 mil-muted">Immersive </p>
-                    <p class="mil-h3 mil-muted mil-thin">Worlds </p>
+                    <p class="mil-h3 mil-muted mil-thin">Protecting</p>
+                    <p class="mil-h3 mil-muted">Your</p>
+                    <p class="mil-h3 mil-muted mil-thin">Privacy</p>
                 </div>
                 <div class="mil-pos-abs mil-animation-2">
                     <div class="mil-reveal-frame">
@@ -1170,33 +60,26 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-        <!-- preloader end -->
-
+        </div>
         <!-- scrollbar progress -->
         <div class="mil-progress-track">
             <div class="mil-progress"></div>
         </div>
-        <!-- scrollbar progress end -->
-
         <!-- menu -->
         <div class="mil-menu-frame">
-            <!-- frame clone -->
             <div class="mil-frame-top">
                 <a href="home-1.html" class="mil-logo">A.</a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
             </div>
-            <!-- frame clone end -->
             <div class="container">
                 <div class="mil-menu-content">
                     <div class="row">
                         <div class="col-xl-5">
-
                             <nav class="mil-main-menu" id="swupMenu">
                                 <ul>
-                                    <li class="mil-has-children mil-active">
+                                    <li class="mil-has-children">
                                         <a href="#.">Homepage</a>
                                         <ul>
                                             <li><a href="home-1.html">Landing page</a></li>
@@ -1212,12 +95,11 @@
                                             <li><a href="portfolio-3.html">Slider</a></li>
                                         </ul>
                                     </li>
-                                    <li class="mil-has-children">
+                                    <li class="mil-has-children mil-active">
                                         <a href="#.">Services</a>
                                         <ul>
                                             <li><a href="services.html">Services List</a></li>
                                             <li><a href="service.html">Single service</a></li>
-                                            <li><a href="design-animation.html">Design & Animation</a></li>
                                         </ul>
                                     </li>
                                     <li class="mil-has-children">
@@ -1231,16 +113,14 @@
                                         <a href="#.">Other pages</a>
                                         <ul>
                                             <li><a href="team.html">Team</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="/contact.html">Contact</a></li>
                                             <li><a href="404.html">404</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </nav>
-
                         </div>
                         <div class="col-xl-7">
-
                             <div class="mil-menu-right-frame">
                                 <div class="mil-animation-in">
                                     <div class="mil-animation-frame">
@@ -1249,386 +129,271 @@
                                     </div>
                                 </div>
                                 <div class="mil-menu-right">
-                                    <div class="row">
-                                        <div class="col-lg-8 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Projects</h6>
-
-                                            <ul class="mil-menu-list">
-                                                <li><a href="project-1.html" class="mil-light-soft">Interior design
-                                                        studio</a></li>
-                                                <li><a href="project-2.html" class="mil-light-soft">Home Security
-                                                        Camera</a></li>
-                                                <li><a href="project-3.html" class="mil-light-soft">Kemia Honest
-                                                        Skincare</a></li>
-                                                <li><a href="project-4.html" class="mil-light-soft">Cascade of Lava</a>
-                                                </li>
-                                                <li><a href="project-5.html" class="mil-light-soft">Air Pro by
-                                                        Molekule</a></li>
-                                                <li><a href="project-6.html" class="mil-light-soft">Tony's
-                                                        Chocolonely</a></li>
-                                            </ul>
-
-                                        </div>
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Useful links</h6>
-
-                                            <ul class="mil-menu-list">
-                                                <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Terms and conditions</a></li>
-                                                <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Careers</a></li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                    <div class="mil-divider mil-mb-60"></div>
-                                    <div class="row justify-content-between">
-
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Canada</h6>
-
-                                            <p class="mil-light-soft mil-up">71 South Los Carneros Road, California
-                                                <span class="mil-no-wrap">+51 174 705 812</span></p>
-
-                                        </div>
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Germany</h6>
-
-                                            <p class="mil-light-soft">Leehove 40, 2678 MC De Lier, Netherlands <span
-                                                    class="mil-no-wrap">+31 174 705 811</span></p>
-
-                                        </div>
-                                    </div>
+                                    <!-- Add any additional menu content here if needed -->
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- menu -->
-
         <!-- curtain -->
         <div class="mil-curtain"></div>
-        <!-- curtain end -->
-
         <!-- content -->
         <div class="mil-content">
             <div id="swupMain" class="mil-main-transition">
-                <!-- Hero Banner Section -->
-                <section class="privacy-hero mil-dark-bg">
-                    <div class="mi-invert-fix">
-                        <div class="mil-animation-frame">
-                            <div class="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6"></div>
-                            <div class="mil-animation mil-position-2 mil-scale" data-value-1="4" data-value-2="1"></div>
-                        </div>
-                        <div class="mil-gradient"></div>
+                <!-- Hero Section + Overview -->
+                <div class="mil-inner-banner">
+                    <div class="mil-animation-frame">
+                        <div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="6"
+                            data-value-2="1.4"></div>
+                    </div>
+                    <div class="mil-banner-content mil-up">
                         <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8 text-center">
-                                    <div class="privacy-hero-content mil-up">
-                                        <div class="privacy-icon mil-mb-30">
-                                            <i class="fas fa-shield-alt"></i>
-                                        </div>
-                                        <h1 class="mil-muted mil-mb-30">Privacy Policy</h1>
-                                        <p class="mil-light-soft mil-mb-60">Your privacy is our priority. We are committed to protecting your personal information and ensuring transparency in how we collect, use, and safeguard your data.</p>
-                                        <div class="privacy-stats">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <div class="stat-item">
-                                                        <h3>100%</h3>
-                                                        <p>Secure</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="stat-item">
-                                                        <h3>24/7</h3>
-                                                        <p>Protection</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="stat-item">
-                                                        <h3>GDPR</h3>
-                                                        <p>Compliant</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <h1 class="mil-mb-60">Your Privacy is Our <span class="mil-thin">Priority</span></h1>
+                            <p class="mil-text-xl mil-mb-30">At We3vision Private Limited, we are committed to
+                                protecting your privacy and ensuring the security of your personal information. This
+                                comprehensive privacy policy outlines how we collect, use, and safeguard your data
+                                across all our services and platforms.<br><br>We believe in transparency and have never
+                                sold your information to any third party for advertising or monetary purposes. Our
+                                commitment to your privacy has been steadfast for nearly 20 years and continues
+                                unchanged.</p>
+                            <a href="#policy-overview" class="mil-button mil-arrow-place mil-mb-20"><span>Read Our
+                                    Policy</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Policy Sections -->
+                <section class="tech-section mil-p-120-90 mil-dark-bg">
+                    <div class="container">
+                        <h2 class="ar-tech-title" style="color: white;"><span
+                                style="color: white; font-weight:700;">Privacy</span> <span
+                                style="color:#e65cff; font-weight:700;">Policy</span> Sections</h2>
+                        <div class="tech-card-grid">
+                            <a href="#part-one">
+                                <div class="tech-card mil-fade-in-up" style="animation-delay: 0.1s;">
+                                    <div><i class="fas fa-database" style="font-size: 3rem; color: #e65cff;"></i></div>
+                                    <div style="color: white;">Part I - Information Collection</div>
                                 </div>
+                            </a>
+                            <a href="#part-two">
+                                <div class="tech-card mil-fade-in-up" style="animation-delay: 0.2s;">
+                                    <div><i class="fas fa-cogs" style="font-size: 3rem; color: #ff5c8a;"></i></div>
+                                    <div style="color: white;">Part II - Information Processing</div>
+                                </div>
+                            </a>
+                            <a href="#part-three">
+                                <div class="tech-card mil-fade-in-up" style="animation-delay: 0.3s;">
+                                    <div><i class="fas fa-shield-alt" style="font-size: 3rem; color: #5c9cff;"></i>
+                                    </div>
+                                    <div style="color: white;">Part III - General Information</div>
+                                </div>
+                            </a>
+                            <a href="#contact-section">
+                                <div class="tech-card mil-fade-in-up" style="animation-delay: 0.4s;">
+                                    <div><i class="fas fa-envelope" style="font-size: 3rem; color: #5cffb0;"></i></div>
+                                    <div style="color: white;">Contact Information</div>
+                                </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Part I Section -->
+                <section class="mil-light-bg" style="margin: 50px;">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Part I -->
+                            <div class="section-header fade-in-up">
+                                <div class="section-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h2 class="section-title">Part I – Information We3vision Private Limited
+                                    collects and controls</h2>
+                            </div>
+                            <div id="part-one" class="section-content fade-in-up">
+                                <p>At We3vision Private Limited, we only collect necessary information
+                                    essential for providing our services to you. This includes details
+                                    you voluntarily provide through email, contact forms, or when
+                                    requesting our services or making purchases. We store your name,
+                                    contact information such as phone numbers, social profiles, address,
+                                    and project-related details.</p>
+
+                                <p>When you visit our websites or use our services, we automatically log
+                                    basic information like your site navigation, location, accessed
+                                    features, and settings. This helps us enhance our websites, improve
+                                    services, and better serve you.</p>
+
+                                <p>At times, we receive information indirectly. For instance, if you
+                                    inquire about our services through referral programs or reselling
+                                    partners, or authenticate via services like LinkedIn, Google, or
+                                    Facebook, they may share your contact details with us. We use this
+                                    information to fulfill your requests. If you interact with our brand
+                                    on social media (e.g., liking, commenting, retweeting, mentioning,
+                                    or following us), we may access your profile information and
+                                    interactions, retaining this data even if you later delete it from
+                                    social media platforms.</p>
+
+                                <div class="info-highlight">
+                                    <h4><i class="fas fa-cogs"></i> What we do with your information
+                                    </h4>
+                                    <p>We use your information to provide the services you've requested
+                                        and to manage your accounts. This includes communicating with
+                                        you about the services you use, handling customer support
+                                        requests, informing you about new services, opportunities for
+                                        feedbacks, and updates to our policies. We analyse collected
+                                        information to better understand user needs and enhance our
+                                        websites and services.</p>
+                                </div>
+
+                                <p>We are obligated to have a legal basis for collecting and processing
+                                    your information. Typically, this is either your consent or the
+                                    necessity to provide the service you've requested. If neither
+                                    applies, we must justify our actions under another legal basis, such
+                                    as our legitimate business interests.</p>
+
+                                <p>You can opt out of certain uses of your information by not providing
+                                    it initially or by later opting out. You can also disable cookies in
+                                    your browser, though this may affect certain website
+                                    functionalities. We disable all third-party cookies across We3vision
+                                    Private Limited websites.</p>
+
+                                <p>Access to your personal information is limited to our employees and
+                                    vendors who require it for legitimate business purposes.</p>
+
+                                <p>The Indian Economic Area (IEA) grants specific rights to data
+                                    subjects (including access, rectification, erasure, restriction of
+                                    processing, data portability, and the right to object and lodge
+                                    complaints). We3vision Private Limited commits to providing these
+                                    rights regardless of your country of residence.</p>
+
+                                <p>We retain your personal information only for as long as necessary for
+                                    the purposes outlined in our Privacy Policy. Once your information
+                                    is no longer needed, we will delete, anonymize, or securely isolate
+                                    it, as appropriate.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- Privacy Policy Content -->
-                <section id="privacy-content" class="privacy-content-section">
-                    <div class="container mil-p-120-30">
-                        <!-- Policy Summary -->
-                        <div class="row mil-mb-90">
-                            <div class="col-12">
-                                <div class="privacy-section">
-                                    <div class="section-header">
-                                        <div class="section-icon">
-                                            <i class="fas fa-info-circle"></i>
-                                        </div>
-                                        <h2>Policy Summary</h2>
-                                    </div>
-                                    <div class="section-content">
-                                        <p>This is a summary of our new privacy policy which takes effect on August 1st, 2025. Our policy applies to all websites of We3vision Private Limited linked here, as well as the products and services they contain. The detailed policy mirrors this summary and constitutes the legal document.</p>
-                                        
-                                        <div class="info-card" style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin: 20px 0;">
-                                            <h4><i class="fas fa-handshake"></i> Our Commitment</h4>
-                                            <p>We3vision Private Limited has never sold your information to any third party for advertising or monetary purposes, nor will we ever do so. This commitment has been steadfast for nearly 20 years and continues unchanged. Our policy outlines what information we collect from you, how we use it, who can access it, and your options.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Quick Navigation Cards -->
-                        <div class="row mil-mb-90">
-                            <div class="col-12">
-                                <div class="privacy-nav-cards">
-                                    <div class="row">
-                                        <div class="col-md-3 col-sm-6">
-                                            <div class="nav-card" data-target="part-one">
-                                                <div class="card-icon">
-                                                    <i class="fas fa-database"></i>
-                                                </div>
-                                                <h4>Part I</h4>
-                                                <p>Information We Collect & Control</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6">
-                                            <div class="nav-card" data-target="part-two">
-                                                <div class="card-icon">
-                                                    <i class="fas fa-cogs"></i>
-                                                </div>
-                                                <h4>Part II</h4>
-                                                <p>Information We Process</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6">
-                                            <div class="nav-card" data-target="part-three">
-                                                <div class="card-icon">
-                                                    <i class="fas fa-shield-alt"></i>
-                                                </div>
-                                                <h4>Part III</h4>
-                                                <p>General Information</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6">
-                                            <div class="nav-card" data-target="contact-section">
-                                                <div class="card-icon">
-                                                    <i class="fas fa-envelope"></i>
-                                                </div>
-                                                <h4>Contact</h4>
-                                                <p>Get in Touch</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Main Content -->
+                <!-- Part II Section -->
+                <section class="mil-light-bg" style="margin: 50px;">
+                    <div class="container">
                         <div class="row">
-                            <div class="col-lg-8">
-                                <!-- Part I - Information We3vision Private Limited collects and controls -->
-                                <div id="part-one" class="privacy-section mil-mb-90">
-                                    <div class="section-header">
-                                        <div class="section-icon">
-                                            <i class="fas fa-database"></i>
-                                        </div>
-                                        <h2>Part I – Information We3vision Private Limited collects and controls</h2>
-                                    </div>
-                                    <div class="section-content">
-                                        <p>At We3vision Private Limited, we only collect necessary information essential for providing our services to you. This includes details you voluntarily provide through email, contact forms, or when requesting our services or making purchases. We store your name, contact information such as phone numbers, social profiles, address, and project-related details.</p>
-                                        
-                                        <p>When you visit our websites or use our services, we automatically log basic information like your site navigation, location, accessed features, and settings. This helps us enhance our websites, improve services, and better serve you.</p>
-                                        
-                                        <p>At times, we receive information indirectly. For instance, if you inquire about our services through referral programs or reselling partners, or authenticate via services like LinkedIn, Google, or Facebook, they may share your contact details with us. We use this information to fulfill your requests. If you interact with our brand on social media (e.g., liking, commenting, retweeting, mentioning, or following us), we may access your profile information and interactions, retaining this data even if you later delete it from social media platforms.</p>
-                                        
-                                        <div class="info-card" style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin: 20px 0;">
-                                            <h4><i class="fas fa-cogs"></i> What we do with your information</h4>
-                                            <p>We use your information to provide the services you've requested and to manage your accounts. This includes communicating with you about the services you use, handling customer support requests, informing you about new services, opportunities for feedbacks, and updates to our policies. We analyse collected information to better understand user needs and enhance our websites and services.</p>
-                                        </div>
-                                        
-                                        <p>We are obligated to have a legal basis for collecting and processing your information. Typically, this is either your consent or the necessity to provide the service you've requested. If neither applies, we must justify our actions under another legal basis, such as our legitimate business interests.</p>
-                                        
-                                        <p>You can opt out of certain uses of your information by not providing it initially or by later opting out. You can also disable cookies in your browser, though this may affect certain website functionalities. We disable all third-party cookies across We3vision Private Limited websites.</p>
-                                        
-                                        <p>Access to your personal information is limited to our employees and vendors who require it for legitimate business purposes.</p>
-                                        
-                                        <p>The Indian Economic Area (IEA) grants specific rights to data subjects (including access, rectification, erasure, restriction of processing, data portability, and the right to object and lodge complaints). We3vision Private Limited commits to providing these rights regardless of your country of residence.</p>
-                                        
-                                        <p>We retain your personal information only for as long as necessary for the purposes outlined in our Privacy Policy. Once your information is no longer needed, we will delete, anonymize, or securely isolate it, as appropriate.</p>
-                                    </div>
+                            <!-- Part II -->
+                            <div class="section-header fade-in-up">
+                                <div class="section-icon">
+                                    <i class="fas fa-cogs"></i>
                                 </div>
+                                <h2 class="section-title">Part II – Information that We3vision Private
+                                    Limited processes on your behalf</h2>
+                            </div>
+                            <div id="part-two" class="section-content fade-in-up">
+                                <p>If you use We3vision Private Limited services to handle third-party
+                                    data, such as information about your customers or employees, you are
+                                    entrusting that data to us for processing.</p>
 
-                                <!-- Part II - Information that We3vision Private Limited processes on your behalf -->
-                                <div id="part-two" class="privacy-section mil-mb-90">
-                                    <div class="section-header">
-                                        <div class="section-icon">
-                                            <i class="fas fa-cogs"></i>
-                                        </div>
-                                        <h2>Part II – Information that We3vision Private Limited processes on your behalf</h2>
-                                    </div>
-                                    <div class="section-content">
-                                        <p>If you use We3vision Private Limited services to handle third-party data, such as information about your customers or employees, you are entrusting that data to us for processing.</p>
-                                        
-                                        <p>As a service provider, you may share data related to your customers, employees, or vendors as part of project development. You retain ownership of this service data. We protect it, restrict access to it, and process it solely according to your instructions. You have the right to access, share via third-party integrations, and request exportation or deletion of this data.</p>
-                                        
-                                        <p>We retain this data for as long as you use We3vision Private Limited services. After you terminate your contract, with your consent, we may retain data backups for a specified period. Your data will be deleted from our development and backup servers upon your request.</p>
-                                        
-                                        <p>If you are in the European Economic Area and believe that someone has entrusted your information to us for processing (e.g., your employer, employee, or a company whose services you use), you can request actions regarding your data. To exercise these rights, please contact the entity that entrusted us with your data, and we will collaborate with them to address your request.</p>
-                                    </div>
+                                <p>As a service provider, you may share data related to your customers,
+                                    employees, or vendors as part of project development. You retain
+                                    ownership of this service data. We protect it, restrict access to
+                                    it, and process it solely according to your instructions. You have
+                                    the right to access, share via third-party integrations, and request
+                                    exportation or deletion of this data.</p>
+
+                                <p>We retain this data for as long as you use We3vision Private Limited
+                                    services. After you terminate your contract, with your consent, we
+                                    may retain data backups for a specified period. Your data will be
+                                    deleted from our development and backup servers upon your request.
+                                </p>
+
+                                <p>If you are in the European Economic Area and believe that someone has
+                                    entrusted your information to us for processing (e.g., your
+                                    employer, employee, or a company whose services you use), you can
+                                    request actions regarding your data. To exercise these rights,
+                                    please contact the entity that entrusted us with your data, and we
+                                    will collaborate with them to address your request.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Part III Section -->
+                <section class="mil-light-bg" style="margin: 50px;">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Part III -->
+                            <div class="section-header fade-in-up">
+                                <div class="section-icon">
+                                    <i class="fas fa-shield-alt"></i>
                                 </div>
+                                <h2 class="section-title">Part III – General</h2>
+                            </div>
+                            <div id="part-three" class="section-content fade-in-up">
+                                <p>There are some limitations to the privacy we can promise. We will
+                                    disclose personal information if necessary to comply with a legal
+                                    obligation, prevent fraud, enforce an agreement, or protect our
+                                    users' safety. We do not currently honour Do Not Track signals from
+                                    internet browsers; when a universal standard for processing them
+                                    emerges, we will follow it.</p>
 
-                                <!-- Part III - General -->
-                                <div id="part-three" class="privacy-section mil-mb-90">
-                                    <div class="section-header">
-                                        <div class="section-icon">
-                                            <i class="fas fa-shield-alt"></i>
-                                        </div>
-                                        <h2>Part III – General</h2>
-                                    </div>
-                                    <div class="section-content">
-                                        <p>There are some limitations to the privacy we can promise. We will disclose personal information if necessary to comply with a legal obligation, prevent fraud, enforce an agreement, or protect our users' safety. We do not currently honour Do Not Track signals from internet browsers; when a universal standard for processing them emerges, we will follow it.</p>
-                                        
-                                        <p>Third-party websites and social media widgets have their own separate privacy policies. Always check the relevant privacy policy before sharing personal information with third parties.</p>
-                                        
-                                        <p>You can contact us to ask questions about our privacy practices, request a GDPR-compliant Data Processing Addendum, notify us if you believe we have collected personal data from a minor, or request the removal of your personal information from our blogs or forums. You can also review our Security Policy and Privacy Policy.</p>
-                                        
-                                        <p>We will notify you if we make any significant changes to our privacy policy or if we decide to sell our services.</p>
-                                    </div>
+                                <p>Third-party websites and social media widgets have their own separate
+                                    privacy policies. Always check the relevant privacy policy before
+                                    sharing personal information with third parties.</p>
+
+                                <p>You can contact us to ask questions about our privacy practices,
+                                    request a GDPR-compliant Data Processing Addendum, notify us if you
+                                    believe we have collected personal data from a minor, or request the
+                                    removal of your personal information from our blogs or forums. You
+                                    can also review our Security Policy and Privacy Policy.</p>
+
+                                <p>We will notify you if we make any significant changes to our privacy
+                                    policy or if we decide to sell our services.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section class="mil-light-bg" style="margin: 50px;">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Contact Section -->
+                            <div class="section-header fade-in-up">
+                                <div class="section-icon">
+                                    <i class="fas fa-envelope"></i>
                                 </div>
-
-                                <!-- Detailed Privacy Policy -->
-                                <div class="privacy-section mil-mb-90">
-                                    <div class="section-header">
-                                        <div class="section-icon">
-                                            <i class="fas fa-file-alt"></i>
-                                        </div>
-                                        <h2>Privacy Policy</h2>
-                                    </div>
-                                    <div class="section-content">
-                                        <p>This Privacy Policy statement is made by the We3vision Private Limited Group, consisting of all entities listed here (collectively, "We3vision Private Limited," "we," "us," or "our"), and is effective as of May 25, 2018. It applies to all our divisions: We3vision Private Limited.</p>
-                                        
-                                        <div class="info-card" style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin: 20px 0;">
-                                            <h4><i class="fas fa-handshake"></i> We3vision Private Limited's Privacy Commitment</h4>
-                                            <p>We3vision Private Limited has prioritized customer and user privacy for nearly 20 years, long before it became politically correct, fashionable, or legally required. We collect only the minimum necessary information, gathering it only when essential for business or a specific transaction. We inform customers about the information we have on them and allow them to opt out of specific engagements. Our primary commitment is that we do not earn revenue from advertising—never have, never will—even if you only submit a project inquiry without opting for our services. We avoid the conflict of interest between gathering customer information and generating advertising revenue, which inevitably compromises customer privacy.</p>
-                                        </div>
-                                        
-                                        <p>This policy aims to explicitly state the information we gather on our customers and website users, how we will use it, and how we will not. While the policy may be longer than we would prefer, it is necessary to unambiguously address all relevant scenarios. We strive to keep the language as simple and direct as possible.</p>
-                                        
-                                        <h4>Scope of this Privacy Policy</h4>
-                                        <p>This Privacy Policy applies to all We3vision Private Limited websites that link to it, as well as to the products and services provided through these websites and our mobile applications. It does not apply to any of our websites, products, or services that have a separate privacy policy.</p>
-                                        
-                                        <p>This Privacy Policy is divided into three parts:</p>
-                                        <ul>
-                                            <li><strong>Part I</strong> – Information We3vision Private Limited collects and controls</li>
-                                            <li><strong>Part II</strong> – Information that We3vision Private Limited processes on your behalf</li>
-                                            <li><strong>Part III</strong> – General</li>
-                                        </ul>
-                                        
-                                        <h4>Part I – Information We3vision Private Limited collects and controls</h4>
-                                        <p>This part addresses how We3vision Private Limited collects and uses information about website visitors, potential customers, users of We3vision Private Limited's services, and others who contact We3vision Private Limited through forms or email addresses published on or linked to our websites.</p>
-                                        
-                                        <h4>Part II – Information that We3vision Private Limited processes on your behalf</h4>
-                                        <p>This part explains how We3vision Private Limited handles data you entrust to us when you use our products and services or share personal or confidential information while requesting customer support.</p>
-                                        
-                                        <h4>Part III – General</h4>
-                                        <p>This part covers topics relevant to both Parts I and II, as well as other general topics such as We3vision Private Limited's security commitments and how we will inform you of changes to this Privacy Policy.</p>
-                                    </div>
-                                </div>
-
-                                <!-- Contact Section -->
-                                <div id="contact-section" class="privacy-section mil-mb-90">
-                                    <div class="section-header">
-                                        <div class="section-icon">
+                                <h2 class="section-title">Contact Us</h2>
+                            </div>
+                            <div id="contact-section" class="section-content fade-in-up">
+                                <div class="contact-cards">
+                                    <div class="contact-card">
+                                        <div class="contact-icon">
                                             <i class="fas fa-envelope"></i>
                                         </div>
-                                        <h2>Contact Us</h2>
+                                        <h4>Email Us</h4>
+                                        <a href="mailto:info@we3visioninfotech.com">info@we3visioninfotech.com</a>
                                     </div>
-                                    <div class="section-content">
-                                        <div class="contact-cards">
-                                            <div class="contact-card">
-                                                <div class="contact-icon">
-                                                    <i class="fas fa-envelope"></i>
-                                                </div>
-                                                <h4>Email Us</h4>
-                                                <a href="mailto:info@we3visioninfotech.com">info@we3visioninfotech.com</a>
-                                            </div>
-                                            <div class="contact-card">
-                                                <div class="contact-icon">
-                                                    <i class="fas fa-phone"></i>
-                                                </div>
-                                                <h4>Call Us</h4>
-                                                <a href="tel:+917383216096">+91 7383216096</a>
-                                            </div>
-                                            <div class="contact-card">
-                                                <div class="contact-icon">
-                                                    <i class="fas fa-map-marker-alt"></i>
-                                                </div>
-                                                <h4>Visit Us</h4>
-                                                <p>936 A, Ishwar Darshan, Bhim Kachchhi Mohallo, Nanpura, Surat-305003, Gujarat, India</p>
-                                            </div>
+                                    <div class="contact-card">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-phone"></i>
                                         </div>
+                                        <h4>Call Us</h4>
+                                        <a href="tel:+917383216096">+91 7383216096</a>
                                     </div>
-                                </div>
-
-                                <div class="privacy-footer">
-                                    <p><strong>Last Updated:</strong> August 1st, 2025</p>
-                                </div>
-                            </div>
-
-                            <!-- Sidebar -->
-                            <div class="col-lg-4">
-                                <div class="privacy-sidebar">                           
-
-                                    <div class="sidebar-widget">
-                                        <h4>Need Help?</h4>
-                                        <p>Questions about our privacy practices? Our team is here to help.</p>
-                                        <a href="/contact.html" class="help-btn">
-                                            <i class="fas fa-headset"></i>
-                                            <span>Get Support</span>
-                                        </a>
-                                    </div>
-
-                                    <div class="sidebar-widget">
-                                        <h4>Privacy Commitment</h4>
-                                        <div class="commitment-item">
-                                            <i class="fas fa-check-circle"></i>
-                                            <span>20+ Years of Trust</span>
+                                    <div class="contact-card" style="width: 900px;">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
                                         </div>
-                                        <div class="commitment-item">
-                                            <i class="fas fa-check-circle"></i>
-                                            <span>No Data Selling</span>
-                                        </div>
-                                        <div class="commitment-item">
-                                            <i class="fas fa-check-circle"></i>
-                                            <span>GDPR Compliant</span>
-                                        </div>
-                                        <div class="commitment-item">
-                                            <i class="fas fa-check-circle"></i>
-                                            <span>Transparent Practices</span>
-                                        </div>
+                                        <h4>Visit Us</h4>
+                                        <p>936 A, Ishwar Darshan, Bhim Kachchhi Mohallo, Nanpura,
+                                            Surat-305003, Gujarat, India</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- Privacy Policy Content End -->
 
-                <!-- Replace footer with shared include -->
+                <!-- Place the footer placeholder and script here, INSIDE the Swup container -->
                 <div id="footer-placeholder"></div>
                 <script>
                     function loadFooter() {
@@ -1721,13 +486,18 @@
                             <div></div>
                             <div></div>
                         </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                     </div>
-
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
                         <path
                             d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
                     </svg>
-
                     <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg"
                         class="mil-lines">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -1750,286 +520,463 @@
                             class="mil-move" />
                     </svg>
                 </div>
-                <!-- hidden elements end -->
-
             </div>
         </div>
-        <!-- content -->
     </div>
     <!-- wrapper end -->
-
     <!-- jQuery js -->
-    <script src="js/plugins/jquery.min.js"></script>
+    <script src="/js/plugins/jquery.min.js"></script>
     <!-- swup js -->
-    <script src="js/plugins/swup.min.js"></script>
+    <script src="/js/plugins/swup.min.js"></script>
     <!-- swiper js -->
-    <script src="js/plugins/swiper.min.js"></script>
+    <script src="/js/plugins/swiper.min.js"></script>
     <!-- fancybox js -->
-    <script src="js/plugins/fancybox.min.js"></script>
+    <script src="/js/plugins/fancybox.min.js"></script>
     <!-- gsap js -->
-    <script src="js/plugins/gsap.min.js"></script>
+    <script src="/js/plugins/gsap.min.js"></script>
     <!-- scroll smoother -->
-    <script src="js/plugins/smooth-scroll.js"></script>
+    <script src="/js/plugins/smooth-scroll.js"></script>
     <!-- scroll trigger js -->
-    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <script src="/js/plugins/ScrollTrigger.min.js"></script>
     <!-- scroll to js -->
-    <script src="js/plugins/ScrollTo.min.js"></script>
+    <script src="/js/plugins/ScrollTo.min.js"></script>
     <!-- We3vision Infotech js -->
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 
-    <!-- Privacy Policy Custom Scripts -->
-    <script>
-        // Smooth scrolling for navigation cards
-        document.addEventListener('DOMContentLoaded', function() {
-            const navCards = document.querySelectorAll('.nav-card');
-            
-            navCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    const targetId = this.getAttribute('data-target');
-                    const targetSection = document.getElementById(targetId);
-                    
-                    if (targetSection) {
-                        targetSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
+    <!-- Enhanced Styles for Privacy Policy -->
+    <style>
+        /* Timeline Styles for Privacy Policy */
+        .privacy-timeline-v2 {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-            // Add active class to navigation cards on scroll
-            window.addEventListener('scroll', function() {
-                const sections = document.querySelectorAll('.privacy-section');
-                const navCards = document.querySelectorAll('.nav-card');
-                
-                let current = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (pageYOffset >= (sectionTop - 200)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                navCards.forEach(card => {
-                    card.classList.remove('active');
-                    if (card.getAttribute('data-target') === current) {
-                        card.classList.add('active');
-                    }
-                });
-            });
+        .privacy-timeline-v2::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(180deg, #e65cff, #ff5c8a, #5c9cff, #5cffb0, #ffd15c, #5cffe6);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
 
-            // Add hover effects to cards
-            const cards = document.querySelectorAll('.nav-card, .info-card, .security-item, .right-card, .contact-card');
-            
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
-            });
+        .privacy-timeline-v2-row {
+            padding: 20px 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
 
-            // Scroll animations for sections
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+        .privacy-timeline-v2-row.left {
+            flex-direction: row;
+        }
 
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
+        .privacy-timeline-v2-row.right {
+            flex-direction: row-reverse;
+        }
 
-            // Observe all privacy sections
-            document.querySelectorAll('.privacy-section').forEach(section => {
-                observer.observe(section);
-            });
+        .privacy-timeline-v2-content {
+            flex: 1;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 0 30px;
+            position: relative;
+            z-index: 2;
+        }
 
-            // Enhanced navigation with smooth transitions
-            const navLinks = document.querySelectorAll('.nav-card');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Remove active class from all links
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    
-                    // Add active class to clicked link
-                    this.classList.add('active');
-                    
-                    // Smooth scroll to target
-                    const targetId = this.getAttribute('data-target');
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        const headerOffset = 100;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        .privacy-timeline-v2-marker {
+            position: relative;
+            z-index: 3;
+        }
 
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
+        .privacy-marker-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border: 4px solid white;
+        }
 
-            // Add loading animation to sections
-            function animateSections() {
-                const sections = document.querySelectorAll('.privacy-section');
-                sections.forEach((section, index) => {
-                    setTimeout(() => {
-                        section.style.opacity = '1';
-                        section.style.transform = 'translateY(0)';
-                    }, index * 200);
-                });
+        .privacy-timeline-v2-checklist {
+            flex: 1;
+            padding: 20px;
+            margin: 0 30px;
+        }
+
+        .privacy-timeline-v2-checklist ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .privacy-timeline-v2-checklist li {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .privacy-timeline-v2-checklist li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #e65cff;
+            font-weight: bold;
+        }
+
+        .privacy-step-title-v2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .privacy-step-num-v2 {
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        .privacy-step-main {
+            color: white;
+        }
+
+        .privacy-step-desc-v2 {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        /* Tech Section Styles */
+        .tech-section {
+            background: linear-gradient(135deg, #A80C4C, #090939, #421256, #531C9B);
+            padding: 80px 0;
+        }
+
+        .ar-tech-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+
+        .tech-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .tech-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-8px);
+            border-color: #e65cff;
+            box-shadow: 0 15px 40px rgba(230, 92, 255, 0.2);
+        }
+
+        .tech-card div:first-child {
+            margin-bottom: 20px;
+        }
+
+        .tech-card div:last-child {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        /* Dark background tech section styles */
+        .mil-dark-bg.tech-section .tech-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .mil-dark-bg.tech-section .tech-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #e65cff;
+            box-shadow: 0 15px 40px rgba(230, 92, 255, 0.3);
+        }
+
+        .mil-dark-bg.tech-section .tech-card div:last-child {
+            color: white;
+        }
+
+        /* Industries Section Styles */
+        .industries-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .tech-heading {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #2c3e50;
+        }
+
+        .industries-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .industries-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .industries-card:hover {
+            transform: translateY(-8px);
+            border-color: #e65cff;
+            box-shadow: 0 15px 40px rgba(230, 92, 255, 0.2);
+        }
+
+        .industries-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .industries-desc {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        /* Section Styles for Privacy Policy */
+        .section-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e65cff, #ff5c8a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 8px 25px rgba(230, 92, 255, 0.3);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .section-content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .info-highlight {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-left: 4px solid #e65cff;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-highlight h4 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-highlight h4 i {
+            margin-right: 10px;
+            color: #e65cff;
+        }
+
+        .info-highlight p {
+            margin: 0;
+            color: #555;
+        }
+
+        /* Contact Cards Styles */
+        .contact-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+            justify-content: center;
+            align-items: center;
+            /* max-width: 1200px; */
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            min-width: 300px;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            border-color: #e65cff;
+            box-shadow: 0 15px 40px rgba(230, 92, 255, 0.2);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #e65cff, #ff5c8a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .contact-card h4 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-card a {
+            color: #e65cff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: #ff5c8a;
+        }
+
+        .contact-card p {
+            color: #7f8c8d;
+            margin: 10px 0 0;
+        }
+
+        .privacy-footer {
+            align-items: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            text-align: center;
+            border-left: 4px solid #e65cff;
+        }
+
+        .privacy-footer p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+
+        /* Dark Section Styles */
+        .mil-dark-bg .section-title {
+            color: white;
+        }
+
+        .mil-dark-bg .section-content {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .mil-dark-bg .section-content p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .mil-dark-bg .info-highlight {
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #e65cff;
+            backdrop-filter: blur(10px);
+        }
+
+        .mil-dark-bg .info-highlight h4 {
+            color: white;
+        }
+
+        .mil-dark-bg .info-highlight p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .privacy-timeline-v2::before {
+                left: 30px;
             }
 
-            // Trigger animations when page loads
-            setTimeout(animateSections, 500);
+            .privacy-timeline-v2-row {
+                flex-direction: column !important;
+                text-align: left;
+            }
 
-            // Enhanced contact card interactions
-            const contactCards = document.querySelectorAll('.contact-card');
-            contactCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-8px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
+            .privacy-timeline-v2-content,
+            .privacy-timeline-v2-checklist {
+                margin: 10px 0;
+                width: 100%;
+            }
 
-            // Add ripple effect to buttons
-            const buttons = document.querySelectorAll('.download-btn, .help-btn');
-            buttons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    const ripple = document.createElement('span');
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
-                    
-                    ripple.style.width = ripple.style.height = size + 'px';
-                    ripple.style.left = x + 'px';
-                    ripple.style.top = y + 'px';
-                    ripple.classList.add('ripple');
-                    
-                    this.appendChild(ripple);
-                    
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                });
-            });
+            .privacy-timeline-v2-marker {
+                align-self: flex-start;
+                margin-left: 0;
+            }
 
-            // Add CSS for ripple effect
-            const style = document.createElement('style');
-            style.textContent = `
-                .download-btn, .help-btn {
-                    position: relative;
-                    overflow: hidden;
-                }
-                
-                .ripple {
-                    position: absolute;
-                    border-radius: 50%;
-                    background: rgba(255, 255, 255, 0.6);
-                    transform: scale(0);
-                    animation: ripple-animation 0.6s linear;
-                    pointer-events: none;
-                }
-                
-                @keyframes ripple-animation {
-                    to {
-                        transform: scale(4);
-                        opacity: 0;
-                    }
-                }
-            `;
-            document.head.appendChild(style);
+            .tech-card-grid,
+            .industries-card-grid {
+                grid-template-columns: 1fr;
+            }
 
-            // Add progress indicator for reading
-            const progressBar = document.createElement('div');
-            progressBar.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 0%;
-                height: 3px;
-                background: linear-gradient(90deg, #2A2BC7, #6366f1);
-                z-index: 9999;
-                transition: width 0.3s ease;
-            `;
-            document.body.appendChild(progressBar);
+            .contact-cards {
+                grid-template-columns: 1fr;
+            }
 
-            window.addEventListener('scroll', function() {
-                const scrollTop = window.pageYOffset;
-                const docHeight = document.body.offsetHeight - window.innerHeight;
-                const scrollPercent = (scrollTop / docHeight) * 100;
-                progressBar.style.width = scrollPercent + '%';
-            });
+            .section-title {
+                font-size: 2rem;
+            }
 
-            // Add back to top button
-            const backToTop = document.createElement('button');
-            backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
-            backToTop.style.cssText = `
-                position: fixed;
-                bottom: 30px;
-                right: 30px;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                background: linear-gradient(135deg, #2A2BC7, #6366f1);
-                color: white;
-                border: none;
-                cursor: pointer;
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-                z-index: 1000;
-                box-shadow: 0 5px 15px rgba(42, 43, 199, 0.3);
-            `;
-            document.body.appendChild(backToTop);
-
-            backToTop.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    backToTop.style.opacity = '1';
-                    backToTop.style.visibility = 'visible';
-                } else {
-                    backToTop.style.opacity = '0';
-                    backToTop.style.visibility = 'hidden';
-                }
-            });
-
-            // Add hover effect to back to top button
-            backToTop.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px)';
-                this.style.boxShadow = '0 8px 25px rgba(42, 43, 199, 0.4)';
-            });
-
-            backToTop.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '0 5px 15px rgba(42, 43, 199, 0.3)';
-            });
-        });
-    </script>
-
+            .section-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 
 </body>
 

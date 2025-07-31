@@ -10511,3 +10511,8 @@ body.nav-open::before {
     display: block !important;
   }
 }
+@media (min-width: 1200px) {
+.mg{
+  margin-left: 100px;
+}
+}
