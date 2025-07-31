@@ -5303,7 +5303,67 @@ html.is-animating .mil-menu-frame {
   }
 }
 
+/* Responsive Header Bar */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  z-index: 2001;
+}
 
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  /* background: #a259f7; */
+  margin: 5px 0;
+  border-radius: 2px;
+  display: block;
+  transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+  .header-bar {
+    padding: 0 12px;
+  }
+
+  .header-bar nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.97);
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    box-shadow: 0 8px 32px rgba(60, 60, 120, 0.10);
+    border-radius: 0 0 18px 18px;
+    padding: 16px 0 24px 0;
+    z-index: 2000;
+  }
+
+  .header-bar nav.open {
+    display: flex;
+    display: flex;
+    margin-top: 60px;
+    animation: slideDown 0.3s ease-out forwards;
+
+  }
+
+  .header-bar nav .dropdown,
+  .header-bar nav a {
+    margin: 0 0 8px 24px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
 
 .dropdown {
   position: relative;
@@ -7171,6 +7231,8 @@ body {
   .hero-arkub{
     margin-top: 130px;
   }
+  
+}
 @media (max-width: 2000px) {
 
   .hero-arkub,
@@ -7220,7 +7282,11 @@ body {
 }
 
 
+<<<<<<< HEAD
 /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Zig-Zag Horizontal Timeline ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
+=======
+/* â”€â”€â”€ Zig-Zag Horizontal Timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+>>>>>>> 05db16d39417151fd4381d21e6cfc93125921608
 
 .timeline {
   position: relative;
@@ -8908,7 +8974,7 @@ tech-dropdown
 
 .drop-menu li a:hover {
   background-color: #f2f2f2;
-
+}
 
 /* Multi-Column Service Layout with Partitions and Animations */
 .service-columns-container {
@@ -9297,6 +9363,7 @@ tech-dropdown
   }
 }
 
+<<<<<<< HEAD
 /* Mobile Services Mega Menu Styles */
 @media (max-width: 900px) {
   .header-bar nav {
@@ -9531,5 +9598,949 @@ tech-dropdown
   .header-bar nav .dropdown:hover .services-mega-menu {
     display: block;
   }
+=======
+/* Enhanced hover effects for better interactivity */
+.service-column:hover .service-column-icon {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+>>>>>>> 05db16d39417151fd4381d21e6cfc93125921608
+}
+
+.service-column-list li a:hover {
+  transform: translateX(8px) scale(1.02);
+}
+
+/* Stagger animation for better visual flow */
+.service-column-list li:nth-child(odd) {
+  animation-delay: calc(0.4s + 0.1s * var(--i, 0));
+}
+
+.service-column-list li:nth-child(even) {
+  animation-delay: calc(0.5s + 0.1s * var(--i, 0));
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 900px) {
+  .header-bar {
+    padding: 0 12px;
+  }
+
+  .header-bar nav {
+    position: fixed;
+    top: 0;
+    right: 0%;
+    left: -100%;
+    height: auto;
+    width: 60%;
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
+    padding: 24px 24px 24px;
+    transition: left 0.3s ease-in-out;
+    z-index: 2001;
+  }
+
+  .header-bar nav.open {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header-bar nav .dropdown,
+  .header-bar nav a {
+    margin: 8px 0;
+    width: 100%;
+  }
+
+  body::before {
+    content: "";
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2000;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  body.nav-open::before {
+    display: block;
+  }
+}
+
+/* Mobile Navigation Components */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 350px;
+  height: 100vh;
+  background: #fff;
+  z-index: 150;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav.wd-opened {
+  right: 0;
+}
+
+/* Animation for mobile menu */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav.wd-opened {
+  animation: slideInRight 0.3s ease-out;
+}
+
+/* Search Form */
+.wd-search-form {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.wd-search-form form {
+  position: relative;
+}
+
+.wd-search-form input[type="text"] {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.wd-search-form .searchsubmit {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.wd-clear-search {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+  font-size: 18px;
+  display: none;
+}
+
+.wd-clear-search:not(.wd-hide) {
+  display: block;
+}
+
+/* Mobile Navigation Tabs */
+.wd-nav-mob-tab {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-tab-title {
+  flex: 1;
+  text-align: center;
+}
+
+.mobile-tab-title a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.mobile-tab-title.wd-active a {
+  color: #2A2BC7;
+  border-bottom: 2px solid #2A2BC7;
+}
+
+/* Mobile Menu Lists */
+.mobile-categories-menu,
+.mobile-pages-menu {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-categories-menu.wd-active,
+.mobile-pages-menu.wd-active {
+  display: block;
+}
+
+.menu-item {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.menu-item a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item a:hover {
+  background-color: #f8f9ff;
+  color: #2A2BC7;
+}
+
+/* Dropdown Structure */
+.wd-sub-menu,
+.sub-sub-menu {
+  display: none;
+  background: #f8f9ff;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wd-sub-menu.wd-active,
+.sub-sub-menu.wd-active {
+  display: block;
+}
+
+.item-level-1 a {
+  padding-left: 30px;
+}
+
+.item-level-2 a {
+  padding-left: 45px;
+}
+
+/* Dropdown Toggle */
+.wd-nav-opener {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.wd-nav-opener::before,
+.wd-nav-opener::after {
+  content: '';
+  position: absolute;
+  background: #666;
+  transition: all 0.3s ease;
+}
+
+.wd-nav-opener::before {
+  width: 12px;
+  height: 2px;
+  top: 9px;
+  left: 4px;
+}
+
+.wd-nav-opener::after {
+  width: 2px;
+  height: 12px;
+  top: 4px;
+  left: 9px;
+}
+
+.wd-nav-opener.wd-opened::after {
+  transform: rotate(90deg);
+}
+
+/* Menu Item with Children */
+.menu-item-has-children {
+  position: relative;
+}
+
+.menu-item-has-children > a {
+  padding-right: 50px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .mobile-nav {
+    width: 90%;
+    max-width: none;
+  }
+  
+  .wd-search-form {
+    padding: 15px;
+  }
+  
+  .menu-item a {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+  
+  .item-level-1 a {
+    padding-left: 25px;
+  }
+  
+  .item-level-2 a {
+    padding-left: 35px;
+  }
+}
+
+/* Animation for mobile menu */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav.wd-opened {
+  animation: slideInRight 0.3s ease-out;
+}
+
+/* Overlay animation */
+body.nav-open::before {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===========================================
+   MOBILE REBRANDING DROPDOWN FIX
+   =========================================== */
+
+@media (max-width: 768px) {
+  /* Ensure REBRANDING, DESIGN & ANIMATION, METAVERSE TECH, WEB/APP DEVELOPMENT, GAME DEVELOPMENT, ENTERPRISE, and DIGITAL MARKETING sections are visible */
+  .rebranding-heading,
+  .design-animation-heading,
+  .metaverse-tech-heading,
+  .web-app-dev-heading,
+  .game-development-heading,
+  .enterprise-heading,
+  .digital-marketing-heading {
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #2A2BC7 !important;
+    background: linear-gradient(135deg, #F8F9FF, #E8E9FF) !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    display: block !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
+  }
+
+  /* Style REBRANDING, DESIGN & ANIMATION, METAVERSE TECH, WEB/APP DEVELOPMENT, GAME DEVELOPMENT, ENTERPRISE, and DIGITAL MARKETING dropdown items */
+  .service-column ul li a[href*="servicesRedesign"],
+  .service-column ul li a[href*="servicesBrandIdentity"],
+  .service-column ul li a[href*="servicesTechnologyMigration"],
+  .service-column ul li a[href*="services2d-3d"],
+  .service-column ul li a[href*="servicesCGI"],
+  .service-column ul li a[href*="servicesGraphics"],
+  .service-column ul li a[href*="servicesAR"],
+  .service-column ul li a[href*="servicesVR"],
+  .service-column ul li a[href*="servicesXR"],
+  .service-column ul li a[href*="servicesMR"],
+  .service-column ul li a[href*="servicesMetaverseSolution"],
+  .service-column ul li a[href*="servicesNftGameDevlopment"],
+  .service-column ul li a[href*="servicesNftMarketPlace"],
+  .service-column ul li a[href*="servicesImmersive"],
+  .service-column ul li a[href*="servicesMetaverseGameDevlopment"],
+  .service-column ul li a[href*="servicesWeb"],
+  .service-column ul li a[href*="servicesMobile"],
+  .service-column ul li a[href*="servicesSoft"],
+  .service-column ul li a[href*="servicesLow"],
+  .service-column ul li a[href*="servicesErpDevlopment"],
+  .service-column ul li a[href*="servicesSaas"],
+  .service-column ul li a[href*="servicesShopify"],
+  .service-column ul li a[href*="servicesWordpress"],
+  .service-column ul li a[href*="servicesAIdev"],
+  .service-column ul li a[href*="servicesAndroidGameDevlopment"],
+  .service-column ul li a[href*="servicesIosGameDevlopment"],
+  .service-column ul li a[href*="servicesCrmDevlopment"],
+  .service-column ul li a[href*="servicesDevlopment"],
+  .service-column ul li a[href*="servicesSeoSearchEngine"],
+  .service-column ul li a[href*="servicesDigitalMarketing"],
+  .service-column ul li a[href*="servicesImmersiveMarketing"] {
+    display: block !important;
+    padding: 8px 12px !important;
+    margin: 4px 0 !important;
+    background: #f8f9fa !important;
+    border-radius: 6px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .service-column ul li a[href*="servicesRedesign"]:hover,
+  .service-column ul li a[href*="servicesBrandIdentity"]:hover,
+  .service-column ul li a[href*="servicesTechnologyMigration"]:hover,
+  .service-column ul li a[href*="services2d-3d"]:hover,
+  .service-column ul li a[href*="servicesCGI"]:hover,
+  .service-column ul li a[href*="servicesGraphics"]:hover,
+  .service-column ul li a[href*="servicesAR"]:hover,
+  .service-column ul li a[href*="servicesVR"]:hover,
+  .service-column ul li a[href*="servicesXR"]:hover,
+  .service-column ul li a[href*="servicesMR"]:hover,
+  .service-column ul li a[href*="servicesMetaverseSolution"]:hover,
+  .service-column ul li a[href*="servicesNftGameDevlopment"]:hover,
+  .service-column ul li a[href*="servicesNftMarketPlace"]:hover,
+  .service-column ul li a[href*="servicesImmersive"]:hover,
+  .service-column ul li a[href*="servicesMetaverseGameDevlopment"]:hover,
+  .service-column ul li a[href*="servicesWeb"]:hover,
+  .service-column ul li a[href*="servicesMobile"]:hover,
+  .service-column ul li a[href*="servicesSoft"]:hover,
+  .service-column ul li a[href*="servicesLow"]:hover,
+  .service-column ul li a[href*="servicesErpDevlopment"]:hover,
+  .service-column ul li a[href*="servicesSaas"]:hover,
+  .service-column ul li a[href*="servicesShopify"]:hover,
+  .service-column ul li a[href*="servicesWordpress"]:hover,
+  .service-column ul li a[href*="servicesAIdev"]:hover,
+  .service-column ul li a[href*="servicesAndroidGameDevlopment"]:hover,
+  .service-column ul li a[href*="servicesIosGameDevlopment"]:hover,
+  .service-column ul li a[href*="servicesCrmDevlopment"]:hover,
+  .service-column ul li a[href*="servicesDevlopment"]:hover,
+  .service-column ul li a[href*="servicesSeoSearchEngine"]:hover,
+  .service-column ul li a[href*="servicesDigitalMarketing"]:hover,
+  .service-column ul li a[href*="servicesImmersiveMarketing"]:hover {
+    background: #e3f2fd !important;
+    color: #1976d2 !important;
+    transform: translateX(5px) !important;
+  }
+
+  /* Mobile dropdown visibility */
+  .dropdown.open .dropdown-menu.mega-menu.services-mega-menu {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 10px 0 !important;
+  }
+
+  /* Mega menu wrapper mobile styling */
+  .mega-menu-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  /* Service column mobile styling */
+  .service-column {
+    width: 100% !important;
+    margin-bottom: 15px !important;
+    padding: 15px !important;
+    background: rgba(248, 249, 255, 0.5) !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(42, 43, 199, 0.1) !important;
+  }
+
+  /* List styling for mobile */
+  .service-column ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+  }
+
+  .service-column ul li {
+    margin-bottom: 5px !important;
+  }
+
+  /* Mobile dropdown animation */
+  @keyframes mobileDropdownSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .dropdown.open .dropdown-menu.mega-menu.services-mega-menu {
+    animation: mobileDropdownSlide 0.3s ease-out forwards;
+  }
+
+  /* Ensure DESIGN & ANIMATION section is visible */
+  .design-animation-heading {
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #2A2BC7 !important;
+    background: linear-gradient(135deg, #F8F9FF, #E8E9FF) !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    display: block !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
+  }
+
+  /* Style DESIGN & ANIMATION dropdown items */
+  .service-column ul li a[href*="services2d-3d"],
+  .service-column ul li a[href*="servicesCGI"],
+  .service-column ul li a[href*="servicesGraphics"] {
+    display: block !important;
+    padding: 8px 12px !important;
+    margin: 4px 0 !important;
+    background: #f8f9fa !important;
+    border-radius: 6px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .service-column ul li a[href*="services2d-3d"]:hover,
+  .service-column ul li a[href*="servicesCGI"]:hover,
+  .service-column ul li a[href*="servicesGraphics"]:hover {
+    background: #e3f2fd !important;
+    color: #1976d2 !important;
+    transform: translateX(5px) !important;
+  }
+}
+
+/* ===========================================
+   CLICKABLE REBRANDING HEADING STYLES
+   =========================================== */
+.clickable-heading {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  user-select: none;
+}
+
+.clickable-heading:hover {
+  color: #2A2BC7 !important;
+  transform: translateX(5px);
+}
+
+.clickable-heading .arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+
+.clickable-heading.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* Mobile styles for clickable headings */
+@media (max-width: 768px) {
+  .clickable-heading {
+    background: linear-gradient(135deg, #F8F9FF, #E8E9FF) !important;
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+    margin-bottom: 10px !important;
+    border: 1px solid rgba(42, 43, 199, 0.2) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .clickable-heading:hover {
+    background: linear-gradient(135deg, #E8E9FF, #D8D9FF) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  .clickable-heading.active {
+    background: linear-gradient(135deg, #2A2BC7, #1A1BB7) !important;
+    color: white !important;
+  }
+  
+  /* Hide services by default on mobile */
+  .rebranding-services {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .rebranding-services.show {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  /* Hide DESIGN & ANIMATION services by default on mobile */
+  .design-animation-services {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .design-animation-services.show {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  /* Hide METAVERSE TECH services by default on mobile */
+  .metaverse-tech-services {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .metaverse-tech-services.show {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  /* Hide WEB/APP DEVELOPMENT services by default on mobile */
+  .web-app-dev-services {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .web-app-dev-services.show {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  /* Hide GAME DEVELOPMENT services by default on mobile */
+  .game-development-services {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .game-development-services.show {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  /* Hide ENTERPRISE services by default on mobile */
+  .enterprise-services {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .enterprise-services.show {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  /* Hide DIGITAL MARKETING services by default on mobile */
+  .digital-marketing-services {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .digital-marketing-services.show {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Style the rebranding services specifically */
+  .rebranding-services li {
+    margin-bottom: 8px !important;
+  }
+  
+  .rebranding-services li a {
+    display: block !important;
+    padding: 10px 16px !important;
+    background: rgba(248, 249, 255, 0.8) !important;
+    border-radius: 6px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border-left: 3px solid transparent !important;
+  }
+  
+  .rebranding-services li a:hover {
+    background: #e3f2fd !important;
+    color: #1976d2 !important;
+    transform: translateX(8px) !important;
+    border-left-color: #1976d2 !important;
+    box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2) !important;
+  }
+  
+  /* Style the DESIGN & ANIMATION services specifically */
+  .design-animation-services li {
+    margin-bottom: 8px !important;
+  }
+  
+  .design-animation-services li a {
+    display: block !important;
+    padding: 10px 16px !important;
+    background: rgba(248, 249, 255, 0.8) !important;
+    border-radius: 6px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border-left: 3px solid transparent !important;
+  }
+  
+  .design-animation-services li a:hover {
+    background: #e3f2fd !important;
+    color: #1976d2 !important;
+    transform: translateX(8px) !important;
+    border-left-color: #1976d2 !important;
+    box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2) !important;
+  }
+  
+  /* Style the METAVERSE TECH services specifically */
+  .metaverse-tech-services li {
+    margin-bottom: 8px !important;
+  }
+  
+  .metaverse-tech-services li a {
+    display: block !important;
+    padding: 10px 16px !important;
+    background: rgba(248, 249, 255, 0.8) !important;
+    border-radius: 6px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border-left: 3px solid transparent !important;
+  }
+  
+  .metaverse-tech-services li a:hover {
+    background: #e3f2fd !important;
+    color: #1976d2 !important;
+    transform: translateX(8px) !important;
+    border-left-color: #1976d2 !important;
+    box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2) !important;
+  }
+  
+  /* Style the WEB/APP DEVELOPMENT services specifically */
+  .web-app-dev-services li {
+    margin-bottom: 8px !important;
+  }
+  
+  .web-app-dev-services li a {
+    display: block !important;
+    padding: 10px 16px !important;
+    background: rgba(248, 249, 255, 0.8) !important;
+    border-radius: 6px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border-left: 3px solid transparent !important;
+    position: relative !important;
+  }
+  
+  .web-app-dev-services li a:hover {
+    background: #e3f2fd !important;
+    color: #1976d2 !important;
+    transform: translateX(8px) !important;
+    border-left-color: #1976d2 !important;
+    box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2) !important;
+  }
+  
+  /* Style the GAME DEVELOPMENT services specifically */
+  .game-development-services li {
+    margin-bottom: 8px !important;
+  }
+  
+  .game-development-services li a {
+    display: block !important;
+    padding: 10px 16px !important;
+    background: rgba(248, 249, 255, 0.8) !important;
+    border-radius: 6px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border-left: 3px solid transparent !important;
+    position: relative !important;
+  }
+  
+  .game-development-services li a:hover {
+    background: #e3f2fd !important;
+    color: #1976d2 !important;
+    transform: translateX(8px) !important;
+    border-left-color: #1976d2 !important;
+    box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2) !important;
+  }
+  
+  /* Style the ENTERPRISE services specifically */
+  .enterprise-services li {
+    margin-bottom: 8px !important;
+  }
+  
+  .enterprise-services li a {
+    display: block !important;
+    padding: 10px 16px !important;
+    background: rgba(248, 249, 255, 0.8) !important;
+    border-radius: 6px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border-left: 3px solid transparent !important;
+    position: relative !important;
+  }
+  
+  .enterprise-services li a:hover {
+    background: #e3f2fd !important;
+    color: #1976d2 !important;
+    transform: translateX(8px) !important;
+    border-left-color: #1976d2 !important;
+    box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2) !important;
+  }
+  
+  /* Style the DIGITAL MARKETING services specifically */
+  .digital-marketing-services li {
+    margin-bottom: 8px !important;
+  }
+  
+  .digital-marketing-services li a {
+    display: block !important;
+    padding: 10px 16px !important;
+    background: rgba(248, 249, 255, 0.8) !important;
+    border-radius: 6px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border-left: 3px solid transparent !important;
+    position: relative !important;
+  }
+  
+  .digital-marketing-services li a:hover {
+    background: #e3f2fd !important;
+    color: #1976d2 !important;
+    transform: translateX(8px) !important;
+    border-left-color: #1976d2 !important;
+    box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2) !important;
+  }
+}
+
+/* Desktop styles for clickable headings */
+@media (min-width: 769px) {
+  .clickable-heading {
+    background: transparent !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .clickable-heading:hover {
+    background: rgba(42, 43, 199, 0.1) !important;
+    color: #2A2BC7 !important;
+  }
+  
+  .clickable-heading.active {
+    background: rgba(42, 43, 199, 0.15) !important;
+    color: #2A2BC7 !important;
+  }
+  
+  /* Show services by default on desktop */
+  .rebranding-services {
+    display: block !important;
+  }
+  
+  /* Show DESIGN & ANIMATION services by default on desktop */
+  .design-animation-services {
+    display: block !important;
+  }
+  
+  /* Show METAVERSE TECH services by default on desktop */
+  .metaverse-tech-services {
+    display: block !important;
+  }
+  
+  /* Show WEB/APP DEVELOPMENT services by default on desktop */
+  .web-app-dev-services {
+    display: block !important;
+  }
+  
+  /* Show GAME DEVELOPMENT services by default on desktop */
+  .game-development-services {
+    display: block !important;
+  }
+  
+  /* Show ENTERPRISE services by default on desktop */
+  .enterprise-services {
+    display: block !important;
+  }
+  
+  /* Show DIGITAL MARKETING services by default on desktop */
+  .digital-marketing-services {
+    display: block !important;
+  }
+}
+@media (min-width: 1200px) {
+.mg{
+  margin-left: 100px;
 }
 }
+
