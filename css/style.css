@@ -9573,8 +9573,7 @@ body.menu-open {
   max-width: 400px;
   margin-left: auto;
   margin-right: 10px;
-  background: #ffffff;
-  border-radius: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f7e1f5 40%, #e0f7fa 100%);
   border: 1px solid #e0e0e0;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
@@ -9729,11 +9728,14 @@ body.menu-open {
   transition: max-height 0.3s ease;
   margin: 0;
   padding: 0;
+  opacity: 0;
 }
 
 .mobile-h4-dropdown.active {
-  max-height: 200px;
+  max-height: 500px;
   margin-top: 10px;
+  opacity: 1;
+  padding: 10px 0;
 }
 
 .mobile-dropdown-menu {
