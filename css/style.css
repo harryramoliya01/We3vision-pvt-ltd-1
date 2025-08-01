@@ -9738,6 +9738,7 @@ body.menu-open {
 
 .mobile-nav-text {
   flex: 1;
+  color: #333333;
   transition: color 0.3s ease;
 }
 
@@ -9759,6 +9760,10 @@ body.menu-open {
 .mobile-dropdown-toggle.active {
   /* background: rgba(243, 215, 255, 0.1); */
   border-color: rgba(243, 215, 255, 0.3);
+}
+
+.mobile-dropdown-toggle.active .mobile-nav-text {
+  color: #333333 !important;
 }
 
 .mobile-dropdown-toggle.active .mobile-arrow {
