@@ -242,13 +242,20 @@ services mega menu (larger font + compact layout)
   margin-bottom: 3px !important;
   font-weight: 700;
   font-size: 11px;
-  color: #2A2BC7;
-  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  color: #ffffff;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f7e1f5 40%);
   padding: 6px 12px;
   border-radius: 15px;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
-  border: 1px solid rgba(42, 43, 199, 0.15);
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.rebranding-heading:hover {
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.6);
+  transform: translateY(-1px);
 }
 
 .design-animation-heading {
@@ -256,14 +263,21 @@ services mega menu (larger font + compact layout)
   margin-bottom: 3px !important;
   font-weight: 700;
   font-size: 11px;
-  color: #2A2BC7;
-  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  color: #ffffff;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f7e1f5 40%);
   padding: 6px 12px;
   border-radius: 15px;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
-  border: 1px solid rgba(42, 43, 199, 0.15);
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   position: relative;
+}
+
+.design-animation-heading:hover {
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.6);
+  transform: translateY(-1px);
 }
 
 .design-animation-heading::before {
@@ -274,7 +288,7 @@ services mega menu (larger font + compact layout)
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #2A2BC7, transparent);
+  background: linear-gradient(90deg, transparent, #f5f7fa 0%, #f7e1f5 40%, transparent);
   animation: expandLine 1.5s ease-in-out forwards;
   border-radius: 1px;
 }
@@ -298,26 +312,35 @@ services mega menu (larger font + compact layout)
   margin-bottom: 3px !important;
   font-weight: 200;
   font-size: 11px;
-  color: #2A2BC7;
-  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  color: #ffffff;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f7e1f5 40%);
   padding: 6px 12px;
   border-radius: 15px;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
-  border: 1px solid rgba(42, 43, 199, 0.15);
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.metaverse-tech-heading:hover {
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.6);
+  transform: translateY(-1px);
 }
 
 .web-app-dev-heading {
   margin-bottom: 3px !important;
   font-weight: 200;
   font-size: 11px;
-  color: #2A2BC7;
-  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  color: #ffffff;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f7e1f5 40%);
   padding: 6px 12px;
   border-radius: 15px;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
-  border: 1px solid rgba(42, 43, 199, 0.15);
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 /* Additional classes for GAME DEVELOPMENT and ENTERPRISE */
@@ -325,13 +348,15 @@ services mega menu (larger font + compact layout)
   margin-bottom: 3px !important;
   font-weight: 200;
   font-size: 11px;
-  color: #2A2BC7;
-  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  color: #ffffff;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f7e1f5 40%);
   padding: 6px 12px;
   border-radius: 15px;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
-  border: 1px solid rgba(42, 43, 199, 0.15);
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .enterprise-heading {
@@ -339,13 +364,15 @@ services mega menu (larger font + compact layout)
   margin-bottom: 3px !important;
   font-weight: 200;
   font-size: 11px;
-  color: #2A2BC7;
-  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  color: #ffffff;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f7e1f5 40%);
   padding: 6px 12px;
   border-radius: 15px;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
-  border: 1px solid rgba(42, 43, 199, 0.15);
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   position: relative;
 }
 
@@ -357,7 +384,7 @@ services mega menu (larger font + compact layout)
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #2A2BC7, transparent);
+  background: linear-gradient(90deg, transparent, #f5f7fa 0%, #f7e1f5 40%, transparent);
   animation: expandLine 1.5s ease-in-out forwards;
   border-radius: 1px;
 }
@@ -367,13 +394,35 @@ services mega menu (larger font + compact layout)
   margin-bottom: 3px !important;
   font-weight: 200;
   font-size: 11px;
-  color: #2A2BC7;
-  background: linear-gradient(135deg, #F8F9FF, #E8E9FF);
+  color: #ffffff;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f7e1f5 40%);
   padding: 6px 12px;
   border-radius: 15px;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(42, 43, 199, 0.1);
-  border: 1px solid rgba(42, 43, 199, 0.15);
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.web-app-dev-heading:hover {
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.6);
+  transform: translateY(-1px);
+}
+
+.game-development-heading:hover {
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.6);
+  transform: translateY(-1px);
+}
+
+.enterprise-heading:hover {
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.6);
+  transform: translateY(-1px);
+}
+
+.digital-marketing-heading:hover {
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.6);
+  transform: translateY(-1px);
 }
 
 .service-column ul {
@@ -9512,7 +9561,7 @@ body.menu-open {
 .drop .drop-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 180%;
   left: 50%;
   transform: translateX(-50%);
   background: white;
