@@ -7364,6 +7364,7 @@ body {
   .hero-arkub{
     margin-top: 130px;
   }
+}
 @media (max-width: 2000px) {
 
   .hero-arkub,
@@ -7498,7 +7499,7 @@ body {
   position: absolute;
   top: 62%;
   left: 6%;
-  width: 88%;
+  width: 85%;
   height: 2px;
   background: #2A2BC7;
   border-radius: 2px;
@@ -7520,8 +7521,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 180px;
-  min-width: 180px;
+  width: 120px;
+  /* min-width: 180px; */
   position: relative;
   background: transparent;
 }
@@ -7613,7 +7614,7 @@ body {
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .mil-timeline-horizontal-cards {
     background: none !important;
     box-shadow: none !important;
@@ -9410,8 +9411,6 @@ tech-dropdown
   }
 }
 }
-}
-
 
 /* Hover Effects */
 .service-columns-container:hover {
@@ -9496,11 +9495,6 @@ body.menu-open {
   overflow: hidden;
 }
 
-@media (min-width: 1200px) {
-  .mg{
-    margin-left: 100px;
-  }
-  }
  /* Base dropdown style */
 .drop {
   position: relative;
@@ -9574,7 +9568,7 @@ body.menu-open {
   max-width: 400px;
   margin-left: auto;
   margin-right: 10px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #f7e1f5 40%, #e0f7fa 100%);
+  background: #fff;
   border: 1px solid #e0e0e0;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -9763,7 +9757,7 @@ body.menu-open {
 }
 
 .mobile-dropdown-toggle.active {
-  background: rgba(243, 215, 255, 0.1);
+  /* background: rgba(243, 215, 255, 0.1); */
   border-color: rgba(243, 215, 255, 0.3);
 }
 
