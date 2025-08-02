@@ -8885,19 +8885,19 @@ margin-bottom: 25px;
 .form-input {
     width: 100%;
     padding: 15px 20px;
-    border: 2px solid #e1e8ed;
+    /* border: 2px solid #e1e8ed; */
     border-radius: 10px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    background: white;
+    /* background: white; */
     color: #5757f8;
     box-sizing: border-box;
 }
 
 .form-input:focus {
     outline: none;
-    border-color: #cbcaca;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    /* border-color: #cbcaca; */
+    /* box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); */
 }
 
 .form-textarea {
