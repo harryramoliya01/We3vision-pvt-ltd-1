@@ -1560,6 +1560,21 @@ $(function () {
         });
       }
 });
+document.querySelectorAll('.drop-toggle').forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const drop = this.closest('.drop');
+      document.querySelectorAll('.drop').forEach(d => {
+        if (d !== drop) d.classList.remove('open');
+      });
+      drop.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.drop').forEach(d => d.classList.remove('open'));
+  });
 
 // Mindmap Section Animation
 (function() {
