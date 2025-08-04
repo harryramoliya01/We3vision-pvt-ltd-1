@@ -10232,25 +10232,25 @@ body.menu-open {
     }
 
     /* Tech Section Styles */
-    .tech-section {
+    .tech-section1 {
         background: linear-gradient(135deg, #A80C4C, #090939, #421256, #531C9B);
         padding: 80px 0;
     }
 
-    .ar-tech-title {
+    .ar-tech-title1 {
         text-align: center;
         font-size: 2.5rem;
         margin-bottom: 60px;
     }
 
-    .tech-card-grid {
+    .tech-card-grid1 {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 30px;
         margin-top: 50px;
     }
 
-    .tech-card {
+    .tech-card1 {
         background: white;
         border-radius: 15px;
         padding: 40px 30px;
@@ -10260,60 +10260,60 @@ body.menu-open {
         border: 2px solid transparent;
     }
 
-    .tech-card:hover {
+    .tech-card1:hover {
         transform: translateY(-8px);
         border-color: #e65cff;
         box-shadow: 0 15px 40px rgba(230, 92, 255, 0.2);
     }
 
-    .tech-card div:first-child {
+    .tech-card1 div:first-child {
         margin-bottom: 20px;
     }
 
-    .tech-card div:last-child {
+    .tech-card1 div:last-child {
         font-weight: 600;
         color: #2c3e50;
         font-size: 1.1rem;
     }
 
     /* Dark background tech section styles */
-    .mil-dark-bg.tech-section .tech-card {
+    .mil-dark-bg.tech-section1 .tech-card1 {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .mil-dark-bg.tech-section .tech-card:hover {
+    .mil-dark-bg.tech-section1 .tech-card1:hover {
         background: rgba(255, 255, 255, 0.15);
         border-color: #e65cff;
         box-shadow: 0 15px 40px rgba(230, 92, 255, 0.3);
     }
 
-    .mil-dark-bg.tech-section .tech-card div:last-child {
+    .mil-dark-bg.tech-section1 .tech-card1 div:last-child {
         color: white;
     }
 
     /* Industries Section Styles */
-    .industries-section {
+    .industries-section1 {
         background: white;
         padding: 80px 0;
     }
 
-    .tech-heading {
+    .tech-heading1 {
         text-align: center;
         font-size: 2.5rem;
         margin-bottom: 60px;
         color: #2c3e50;
     }
 
-    .industries-card-grid {
+    .industries-card-grid1 {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 30px;
         margin-top: 50px;
     }
 
-    .industries-card {
+    .industries-card1 {
         background: white;
         border-radius: 15px;
         padding: 40px 30px;
@@ -10322,31 +10322,31 @@ body.menu-open {
         border: 2px solid transparent;
     }
 
-    .industries-card:hover {
+    .industries-card1:hover {
         transform: translateY(-8px);
         border-color: #e65cff;
         box-shadow: 0 15px 40px rgba(230, 92, 255, 0.2);
     }
 
-    .industries-title {
+    .industries-title1 {
         font-size: 1.3rem;
         font-weight: 600;
         color: #2c3e50;
         margin-bottom: 15px;
     }
 
-    .industries-desc {
+    .industries-desc1 {
         color: #7f8c8d;
         line-height: 1.6;
     }
 
     /* Section Styles for Privacy Policy */
-    .section-header {
+    .section-header1 {
         margin-bottom: 40px;
         text-align: center;
     }
 
-    .section-icon {
+    .section-icon1 {
         width: 80px;
         height: 80px;
         background: linear-gradient(135deg, #e65cff, #ff5c8a);
@@ -10360,7 +10360,7 @@ body.menu-open {
         box-shadow: 0 8px 25px rgba(230, 92, 255, 0.3);
     }
 
-    .section-title {
+    .section-title1 {
         text-align: center;
         font-size: 2.5rem;
         font-weight: 700;
@@ -10368,12 +10368,12 @@ body.menu-open {
         margin-bottom: 20px;
     }
 
-    .section-content {
+    .section-content1 {
         line-height: 1.8;
         color: #555;
     }
 
-    .section-content p {
+    .section-content1 p {
         margin-bottom: 20px;
         font-size: 1.1rem;
         text-align: left;
@@ -10385,7 +10385,7 @@ body.menu-open {
 
     /* Responsive alignment for section-content p */
     @media (min-width: 1200px) {
-        .section-content p {
+        .section-content1 p {
             font-size: 1.05rem;
             line-height: 1.75;
             text-align: justify;
@@ -10393,7 +10393,7 @@ body.menu-open {
     }
 
     @media (max-width: 1200px) {
-        .section-content p {
+        .section-content1 p {
             font-size: 1rem;
             line-height: 1.7;
             margin-bottom: 18px;
@@ -10401,7 +10401,7 @@ body.menu-open {
     }
 
     @media (max-width: 992px) {
-        .section-content p {
+        .section-content1 p {
             font-size: 0.95rem;
             line-height: 1.65;
             margin-bottom: 16px;
@@ -10410,7 +10410,7 @@ body.menu-open {
     }
 
     @media (max-width: 768px) {
-        .section-content p {
+        .section-content1 p {
             font-size: 0.9rem;
             line-height: 1.6;
             margin-bottom: 15px;
@@ -10420,7 +10420,7 @@ body.menu-open {
     }
 
     @media (max-width: 600px) {
-        .section-content p {
+        .section-content1 p {
             font-size: 0.85rem;
             line-height: 1.55;
             margin-bottom: 14px;
@@ -10429,7 +10429,7 @@ body.menu-open {
     }
 
     @media (max-width: 480px) {
-        .section-content p {
+        .section-content1 p {
             font-size: 0.8rem;
             line-height: 1.5;
             margin-bottom: 12px;
@@ -10438,7 +10438,7 @@ body.menu-open {
     }
 
     @media (max-width: 360px) {
-        .section-content p {
+        .section-content1 p {
             font-size: 0.75rem;
             line-height: 1.45;
             margin-bottom: 10px;
@@ -10447,28 +10447,28 @@ body.menu-open {
     }
 
     /* Center alignment for specific contexts */
-    .section-content.center p {
+    .section-content1.center p {
         text-align: center;
     }
 
-    .section-content.right p {
+    .section-content1.right p {
         text-align: right;
     }
 
     /* Dark theme responsive adjustments */
     @media (max-width: 768px) {
-        .mil-dark-bg .section-content p {
+        .mil-dark-bg .section-content1 p {
             color: rgba(255, 255, 255, 0.85);
         }
     }
 
     @media (max-width: 480px) {
-        .mil-dark-bg .section-content p {
+        .mil-dark-bg .section-content1 p {
             color: rgba(255, 255, 255, 0.9);
         }
     }
 
-    .info-highlight {
+    .info-highlight1 {
         background: linear-gradient(135deg, #f8f9fa, #e9ecef);
         border-left: 4px solid #e65cff;
         padding: 25px;
@@ -10477,7 +10477,7 @@ body.menu-open {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .info-highlight h4 {
+    .info-highlight1 h4 {
         color: #2c3e50;
         font-weight: 600;
         margin-bottom: 15px;
@@ -10485,18 +10485,18 @@ body.menu-open {
         align-items: center;
     }
 
-    .info-highlight h4 i {
+    .info-highlight1 h4 i {
         margin-right: 10px;
         color: #e65cff;
     }
 
-    .info-highlight p {
+    .info-highlight1 p {
         margin: 0;
         color: #555;
     }
 
     /* Contact Cards Styles */
-    .contact-cards {
+    .contact-cards1 {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
@@ -10506,7 +10506,7 @@ body.menu-open {
         /* max-width: 1200px; */
     }
 
-    .contact-card {
+    .contact-card1 {
         background: white;
         border-radius: 15px;
         padding: 30px;
@@ -10517,13 +10517,13 @@ body.menu-open {
         min-width: 300px;
     }
 
-    .contact-card:hover {
+    .contact-card1:hover {
         transform: translateY(-8px);
         border-color: #e65cff;
         box-shadow: 0 15px 40px rgba(230, 92, 255, 0.2);
     }
 
-    .contact-icon {
+    .contact-icon1 {
         width: 60px;
         height: 60px;
         background: linear-gradient(135deg, #e65cff, #ff5c8a);
@@ -10536,51 +10536,51 @@ body.menu-open {
         font-size: 1.5rem;
     }
 
-    .contact-card h4 {
+    .contact-card1 h4 {
         color: #2c3e50;
         font-weight: 600;
         margin-bottom: 15px;
     }
 
-    .contact-card a {
+    .contact-card1 a {
         color: #e65cff;
         text-decoration: none;
         font-weight: 500;
         transition: color 0.3s ease;
     }
 
-    .contact-card a:hover {
+    .contact-card1 a:hover {
         color: #ff5c8a;
     }
 
-    .contact-card p {
+    .contact-card1 p {
         color: #7f8c8d;
         margin: 10px 0 0;
     }
     /* Dark Section Styles */
-    .mil-dark-bg .section-title {
+    .mil-dark-bg .section-title1 {
         color: white;
     }
 
-    .mil-dark-bg .section-content {
+    .mil-dark-bg .section-content1 {
         color: rgba(255, 255, 255, 0.9);
     }
 
-    .mil-dark-bg .section-content p {
+    .mil-dark-bg .section-content1 p {
         color: rgba(255, 255, 255, 0.8);
     }
 
-    .mil-dark-bg .info-highlight {
+    .mil-dark-bg .info-highlight1 {
         background: rgba(255, 255, 255, 0.1);
         border-left: 4px solid #e65cff;
         backdrop-filter: blur(10px);
     }
 
-    .mil-dark-bg .info-highlight h4 {
+    .mil-dark-bg .info-highlight1 h4 {
         color: white;
     }
 
-    .mil-dark-bg .info-highlight p {
+    .mil-dark-bg .info-highlight1 p {
         color: rgba(255, 255, 255, 0.8);
     }
 
@@ -10606,20 +10606,20 @@ body.menu-open {
             margin-left: 0;
         }
 
-        .tech-card-grid,
-        .industries-card-grid {
+        .tech-card-grid1,
+        .industries-card-grid1 {
             grid-template-columns: 1fr;
         }
 
-        .contact-cards {
+        .contact-cards1 {
             grid-template-columns: 1fr;
         }
 
-        .section-title {
+        .section-title1 {
             font-size: 2rem;
         }
 
-        .section-content p {
+        .section-content1 p {
             font-size: 1rem;
         }
     }
