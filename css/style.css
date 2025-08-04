@@ -876,10 +876,10 @@ a {
 
 .mil-img-frame img {
   position: absolute;
-  top: 40px;
+  top: 100px;
   left: 0;
-  width: 95%;
-  height: 85%;
+  width: 90%;
+  height: 75%;
   -o-object-position: center;
   object-position: center;
 }
