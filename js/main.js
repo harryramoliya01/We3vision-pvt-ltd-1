@@ -1933,16 +1933,16 @@ emailjs.init("LsKNt382V8Rfdzzb4");
             try {
                 // Send email via EmailJS
                 await emailjs.sendForm(
-                    "service_waf05y7", // your service ID
-                    "template_yjjjlyt", // your template ID
+                    "service_kcjn8gj", // your service ID
+                    "template_tig18om", // your template ID
                     form,
-                    "LsKNt382V8Rfdzzb4" // your public key
+                    "9fbAhK4AecFe8pJUV" // your public key
                 );
 
-                    // Open WhatsApp with pre-filled message
-    const message = `Name: ${data.fullName}%0AEmail: ${data.email}%0AProject Name: ${data.projectName}%0AMobile: ${data.mobile}%0AMessage: ${data.message}`;
-    const whatsappURL = `https://wa.me/+917383216096?text=${message}`;
-    window.open(whatsappURL, '_blank');
+    //                 // Open WhatsApp with pre-filled message
+    // const message = `Name: ${data.fullName}%0AEmail: ${data.email}%0AProject Name: ${data.projectName}%0AMobile: ${data.mobile}%0AMessage: ${data.message}`;
+    // const whatsappURL = `https://wa.me/+14155238886?text=${message}`;
+    // window.open(whatsappURL, '_blank');
 
 
                 showToast("Message sent successfully!");
