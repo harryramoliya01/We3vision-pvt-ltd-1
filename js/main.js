@@ -838,17 +838,59 @@ $(function () {
                 ease: 'sine',
             });
         });
+        
+        /***************************
+
+        Re-initialize dropdowns after content replacement
+
+        ***************************/
+        // Re-initialize the unified dropdown system
+        setTimeout(function() {
+            // Remove any existing event listeners to prevent duplicates
+            $(document).off('click.dropdown');
+            $('.drop-toggle, .dropdown-toggle').off('click.dropdown');
+            
+            // Handle .drop elements (Technologies, Blog, Company)
+            $(document).on('click.dropdown', '.drop-toggle', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const drop = $(this).closest('.drop');
+                
+                // Close other dropdowns
+                $('.drop, .dropdown').not(drop).removeClass('open');
+                
+                // Toggle current dropdown
+                drop.toggleClass('open');
+            });
+            
+            // Handle .dropdown elements (Services)
+            $(document).on('click.dropdown', '.dropdown-toggle', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const dropdown = $(this).closest('.dropdown');
+                
+                // Close other dropdowns
+                $('.drop, .dropdown').not(dropdown).removeClass('open');
+                
+                // Toggle current dropdown
+                dropdown.toggleClass('open');
+            });
+            
+            // Close dropdowns when clicking outside
+            $(document).on('click.dropdown', function(e) {
+                if (!$(e.target).closest('.drop, .dropdown').length) {
+                    $('.drop, .dropdown').removeClass('open');
+                }
+            });
+        }, 100);
+        
         /***************************
 
         main menu
 
         ***************************/
-        $('.mil-has-children a').on('click', function () {
-            $('.mil-has-children ul').removeClass('mil-active');
-            $('.mil-has-children a').removeClass('mil-active');
-            $(this).toggleClass('mil-active');
-            $(this).next().toggleClass('mil-active');
-        });
+        // Note: .mil-has-children system is handled separately for other pages
+        // This section is for the .drop/.dropdown system used in header.html
         /***************************
 
         scroll animations
@@ -1193,7 +1235,9 @@ $(function () {
         }
     });
 
-    // Desktop Dropdown Hover (existing functionality)
+    // Desktop Dropdown Hover (existing functionality) - DISABLED to prevent conflicts
+    // This is now handled by the unified dropdown system above
+    /*
     if ($(window).width() > 900) {
         $('.dropdown').hover(
             function() {
@@ -1206,6 +1250,7 @@ $(function () {
             }
         );
     }
+    */
 
     // Close menu on escape key
     $(document).on('keydown', function(e) {
@@ -1559,22 +1604,55 @@ $(function () {
           });
         });
       }
-});
-document.querySelectorAll('.drop-toggle').forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      const drop = this.closest('.drop');
-      document.querySelectorAll('.drop').forEach(d => {
-        if (d !== drop) d.classList.remove('open');
-      });
-      drop.classList.toggle('open');
-    });
-  });
 
-  document.addEventListener('click', function () {
-    document.querySelectorAll('.drop').forEach(d => d.classList.remove('open'));
-  });
+    // Unified dropdown functionality for both .drop and .dropdown elements
+    function initializeDropdowns() {
+        // Remove any existing event listeners to prevent duplicates
+        $(document).off('click.dropdown');
+        $('.drop-toggle, .dropdown-toggle').off('click.dropdown');
+        
+        // Handle .drop elements (Technologies, Blog, Company)
+        $(document).on('click.dropdown', '.drop-toggle', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const drop = $(this).closest('.drop');
+            
+            // Close other dropdowns
+            $('.drop, .dropdown').not(drop).removeClass('open');
+            
+            // Toggle current dropdown
+            drop.toggleClass('open');
+        });
+        
+        // Handle .dropdown elements (Services)
+        $(document).on('click.dropdown', '.dropdown-toggle', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const dropdown = $(this).closest('.dropdown');
+            
+            // Close other dropdowns
+            $('.drop, .dropdown').not(dropdown).removeClass('open');
+            
+            // Toggle current dropdown
+            dropdown.toggleClass('open');
+        });
+        
+        // Close dropdowns when clicking outside
+        $(document).on('click.dropdown', function(e) {
+            if (!$(e.target).closest('.drop, .dropdown').length) {
+                $('.drop, .dropdown').removeClass('open');
+            }
+        });
+    }
+    
+    // Initialize dropdowns on page load
+    initializeDropdowns();
+    
+    // Re-initialize dropdowns after swup content replacement
+    document.addEventListener('swup:contentReplaced', function() {
+        setTimeout(initializeDropdowns, 100);
+    });
+});
 
 // Mindmap Section Animation
 (function() {

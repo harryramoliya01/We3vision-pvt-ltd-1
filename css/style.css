@@ -84,7 +84,12 @@ company-blog-dropdown
 
 /* Hover effect */
 .drop:hover .drop-menu {
-  display: block;
+  display: block !important;
+}
+
+/* Show dropdown when open class is added */
+.drop.open .drop-menu {
+  display: block !important;
 }
 
 /* Mega menu list styling */
@@ -119,68 +124,7 @@ company-blog-dropdown
 tech-dropdown 
 
 ------------------------------------------- */
-/* Base layout */
-.drop {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-
-.drop-toggle {
-  cursor: pointer;
-  font-size: 16px;
-  text-decoration: none;
-  color: #333;
-  padding: 10px 15px;
-}
-
-.drop-toggle .arrow {
-  margin-left: 5px;
-  font-size: 12px;
-}
-
-/* Dropdown menu styling */
-.drop-menu {
-  display: none;
-  position: absolute;
-  top: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  min-width: 220px;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 10px 0;
-  border-radius: 4px;
-  z-index: 999;
-}
-
-/* Show dropdown on hover */
-.drop:hover .drop-menu {
-  display: block;
-}
-
-/* Menu list */
-.drop-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.drop-menu li {
-  padding: 8px 16px;
-}
-
-.drop-menu li a {
-  text-decoration: none;
-  color: #444;
-  font-size: 14px;
-  display: block;
-}
-
-.drop-menu li a:hover {
-  background-color: #f2f2f2;
-}
+/* Note: .drop-menu styles are defined earlier in the file */
 
 
 /* -------------------------------------------
@@ -9189,145 +9133,14 @@ resize: vertical;
 company-blog-dropdown 
 
 ------------------------------------------- */
-.drop {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-
-.drop-toggle {
-  cursor: pointer;
-  font-size: 16px;
-  text-decoration: none;
-  color: #333;
-  padding: 10px 15px;
-}
-
-.drop-toggle .arrow {
-  margin-left: 5px;
-  font-size: 12px;
-}
-
-.drop-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  min-width: 240px;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 10px 0;
-  border-radius: 4px;
-  z-index: 999;
-}
-
-/* Hover effect */
-.drop:hover .drop-menu {
-  display: block;
-}
-
-/* Mega menu list styling */
-.drop-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.drop-menu li {
-  padding: 8px 16px;
-  border-bottom: 1px solid #eee;
-}
-
-.drop-menu li:last-child {
-  border-bottom: none;
-}
-
-.drop-menu li a {
-  text-decoration: none;
-  color: #444;
-  font-size: 14px;
-  display: block;
-}
-
-.drop-menu li a:hover {
-  background-color: #f2f2f2;
-}
+/* Unified dropdown styles - no duplicate definitions */
 
 /* -------------------------------------------
 
 tech-dropdown 
 
 ------------------------------------------- */
-/* Base layout */
-.drop {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-
-.drop-toggle {
-  cursor: pointer;
-  font-size: 16px;
-  text-decoration: none;
-  color: #333;
-  padding: 10px 15px;
-}
-
-.drop-toggle .arrow {
-  margin-left: 5px;
-  font-size: 12px;
-}
-
-/* Dropdown menu styling */
-.drop-menu {
-  display: none;
-  position: absolute;
-  top: 200%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  min-width: 225px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.1),
-    0 8px 16px rgba(0, 0, 0, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(20px);
-  border-radius: 12px;
-  z-index: 999;
-  padding: 8px 0;
-  animation: dropMenuSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  overflow: hidden;
-  margin-left: 10%;
-}
-
-/* Show dropdown on hover */
-.drop:hover .drop-menu {
-  display: block;
-}
-
-/* Menu list */
-.drop-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.drop-menu li {
-  padding: 8px 16px;
-}
-
-.drop-menu li a {
-  text-decoration: none;
-  color: #444;
-  font-size: 14px;
-  display: block;
-}
-
-.drop-menu li a:hover {
-  background-color: #f2f2f2;
+/* Unified dropdown styles - no duplicate definitions */
 
 
 /* Multi-Column Service Layout with Partitions and Animations */
@@ -9636,7 +9449,6 @@ tech-dropdown
     width: 100%;
   }
 }
-}
 
 /* Hover Effects */
 .service-columns-container:hover {
@@ -9721,42 +9533,7 @@ body.menu-open {
   overflow: hidden;
 }
 
- /* Base dropdown style */
-.drop {
-  position: relative;
-  display: inline-block;
-}
-
-.drop-toggle {
-  cursor: pointer;
-  padding: 10px 15px;
-  color: #333;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.drop .drop-menu {
-  display: none;
-  position: absolute;
-  top: 180%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  min-width: 200px;
-  border: 1px solid #ccc;
-  z-index: 999;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Show dropdown on hover (desktop) */
-.drop:hover .drop-menu {
-  display: block;
-}
-
-/* Show on click (mobile) */
-.drop.open .drop-menu {
-  display: block;
-}
+/* Note: .drop styles are defined earlier in the file */
 
 @media (min-width: 901px) {
   .mobile-menu-overlay {
@@ -10324,4 +10101,20 @@ body.menu-open {
 
 .mobile-menu-overlay::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
+}
+.drop-menu {
+  /* margin-top: 20px; */
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  min-width: 225px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  padding: 8px 0;
+  animation: dropMenuSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  overflow: hidden;
+  margin-left: 10%;
 }
