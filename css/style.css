@@ -3193,6 +3193,12 @@ services
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 }
 
+/* Custom element style */
+element.style {
+    color: #9c9c9c;
+    font-size: 15px;
+}
+
 .mil-service-list.mil-dark li:first-child {
   border-top: solid 1px rgba(0, 0, 0, 0.1);
 }
