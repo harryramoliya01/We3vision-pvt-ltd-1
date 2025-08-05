@@ -8383,7 +8383,7 @@ body {
   color: #fff;
   border: none;
   border-radius: 99px;
-  padding: 14px 38px;
+  /* padding: 14px 38px; */
   font-size: 1.13rem;
   font-weight: 700;
   box-shadow: 0 2px 12px rgba(162, 89, 247, 0.13);
@@ -8391,6 +8391,7 @@ body {
   margin-top: 10px;
   cursor: pointer;
 }
+
 
 .submit-btn.glass-btn:hover {
   background: linear-gradient(135deg, #2a174d 0%, #6377f4 100%);
@@ -8430,6 +8431,13 @@ body {
     min-width: 0;
     width: 50%;
   }
+ 
+}
+
+@media (min-width: 1200px) {
+  br{
+    display: none;
+  }
 }
 
 .left-section,
@@ -8440,6 +8448,7 @@ body {
 .right-section {
   margin-bottom: 32px;
 }
+
 
 @media (min-width: 900px) {
   .right-section {
@@ -9045,6 +9054,9 @@ resize: vertical;
     .contact-form-section h2 {
         font-size: 1.9rem;
     }
+    .contact-item{
+      width: 80vw!important;
+  }
 
     .contact-info-section {
         display: none;
