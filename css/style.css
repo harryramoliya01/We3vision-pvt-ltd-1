@@ -8008,42 +8008,39 @@ body {
   }
 }
 
-/* --- Parallax/Scroll Animation Styles for Mindmap --- */
+/* --- Parallax/Scroll Animation Styles for Mindmap - DISABLED --- */
 .parallax-animate {
   position: relative;
 }
 
-.circle-rotate {
-  transition: transform 0.7s cubic-bezier(.4, 0, .2, 1), box-shadow 0.5s;
-  will-change: transform, box-shadow;
-}
 
 .slide-in-left,
 .slide-in-right {
-  opacity: 0;
-  filter: blur(12px);
-  transition: opacity 0.7s cubic-bezier(.4, 0, .2, 1), transform 0.7s cubic-bezier(.4, 0, .2, 1), filter 0.7s cubic-bezier(.4, 0, .2, 1);
-  will-change: opacity, transform, filter;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  /* transition: opacity 0.7s cubic-bezier(.4, 0, .2, 1), transform 0.7s cubic-bezier(.4, 0, .2, 1), filter 0.7s cubic-bezier(.4, 0, .2, 1); */
+  /* will-change: opacity, transform, filter; */
 }
 
 .slide-in-left.visible {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
 }
 
 .slide-in-right.visible {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
 }
 
 .slide-in-left {
-  transform: translateX(-80px);
+  transform: none !important;
 }
 
 .slide-in-right {
-  transform: translateX(80px);
+  transform: none !important;
 }
 
 @media (max-width: 991px) {
@@ -8386,7 +8383,7 @@ body {
   color: #fff;
   border: none;
   border-radius: 99px;
-  padding: 14px 38px;
+  /* padding: 14px 38px; */
   font-size: 1.13rem;
   font-weight: 700;
   box-shadow: 0 2px 12px rgba(162, 89, 247, 0.13);
@@ -8394,6 +8391,7 @@ body {
   margin-top: 10px;
   cursor: pointer;
 }
+
 
 .submit-btn.glass-btn:hover {
   background: linear-gradient(135deg, #2a174d 0%, #6377f4 100%);
@@ -8433,6 +8431,13 @@ body {
     min-width: 0;
     width: 50%;
   }
+ 
+}
+
+@media (min-width: 1200px) {
+  br{
+    display: none;
+  }
 }
 
 .left-section,
@@ -8443,6 +8448,7 @@ body {
 .right-section {
   margin-bottom: 32px;
 }
+
 
 @media (min-width: 900px) {
   .right-section {
@@ -9048,6 +9054,9 @@ resize: vertical;
     .contact-form-section h2 {
         font-size: 1.9rem;
     }
+    .contact-item{
+      width: 80vw!important;
+  }
 
     .contact-info-section {
         display: none;

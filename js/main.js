@@ -1824,140 +1824,56 @@ $(function () {
     });
 });
 
-// Mindmap Section Animation
-(function() {
-    document.addEventListener("DOMContentLoaded", function() {
-      function revealMindmap() {
-        var el = document.querySelector('.mindmap-flex');
-        if (!el) return;
-        var rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add('visible');
-          el.querySelectorAll('.mindmap-col, .mindmap-center').forEach(function(child, i) {
-            setTimeout(() => child.classList.add('visible'), 100 + i * 150);
-          });
-          window.removeEventListener('scroll', revealMindmap);
-        }
-      }
-      document.querySelectorAll('.mindmap-flex, .mindmap-col, .mindmap-center').forEach(function(el) {
-        el.classList.add('mindmap-animate');
-      });
-      window.addEventListener('scroll', revealMindmap);
-      revealMindmap();
-    });
-  })();
+// Mindmap Section Animation - DISABLED
+// (function() {
+//     document.addEventListener("DOMContentLoaded", function() {
+//       function revealMindmap() {
+//         var el = document.querySelector('.mindmap-flex');
+//         if (!el) return;
+//         var rect = el.getBoundingClientRect();
+//         if (rect.top < window.innerHeight - 100) {
+//           el.classList.add('visible');
+//           el.querySelectorAll('.mindmap-col, .mindmap-center').forEach(function(child, i) {
+//             setTimeout(() => child.classList.add('visible'), 100 + i * 150);
+//           });
+//           window.removeEventListener('scroll', revealMindmap);
+//         }
+//       }
+//       document.querySelectorAll('.mindmap-flex, .mindmap-col, .mindmap-center').forEach(function(el) {
+//         el.classList.add('mindmap-animate');
+//       });
+//       window.addEventListener('scroll', revealMindmap);
+//       revealMindmap();
+//     });
+//   })();
   
   
-  // Parallax/scroll animation for mindmap section
-  (function() {
-    var section = document.querySelector('.parallax-animate');
-    var left = document.querySelector('.slide-in-left');
-    var right = document.querySelector('.slide-in-right');
-    // var circle = document.querySelector('.circle-rotate'); // No longer needed
-    var animated = false;
-    function animateParallax() {
-      if (!section || !left || !right) return;
-      var rect = section.getBoundingClientRect();
-      var windowHeight = window.innerHeight;
-      if (rect.top < windowHeight - 100 && rect.bottom > 100) {
-        // Animate in left/right columns
-        left.classList.add('visible');
-        right.classList.add('visible');
-        // No circle rotation
-        animated = true;
-      } else if (animated) {
-        // Reset if out of view
-        left.classList.remove('visible');
-        right.classList.remove('visible');
-        // No circle rotation
-        animated = false;
-      }
-    }
-    window.addEventListener('scroll', animateParallax);
-    animateParallax();
-  })();
+  // Parallax/scroll animation for mindmap section - DISABLED
+  // (function() {
+  //   var section = document.querySelector('.parallax-animate');
+  //   var left = document.querySelector('.slide-in-left');
+  //   var right = document.querySelector('.slide-in-right');
+  //   // var circle = document.querySelector('.circle-rotate'); // No longer needed
+  //   var animated = false;
+  //   function animateParallax() {
+  //     if (!section || !left || !right) return;
+  //     var rect = section.getBoundingClientRect();
+  //     var windowHeight = window.innerHeight;
+  //     if (rect.top < windowHeight - 100 && rect.bottom > 100) {
+  //       // Animate in left/right columns
+  //       left.classList.add('visible');
+  //       right.classList.add('visible');
+  //       // No circle rotation
+  //       animated = true;
+  //     } else if (animated) {
+  //       // Reset if out of view
+  //       left.classList.remove('visible');
+  //       right.classList.remove('visible');
+  //       // No circle rotation
+  //       animated = false;
+  //     }
+  //   }
+  //   window.addEventListener('scroll', animateParallax);
+  //   animateParallax();
+  // })();
 
-// //   form section
-// emailjs.init("LsKNt382V8Rfdzzb4");
-
-//         const form = document.getElementById('contactForm');
-//         const errorMessage = document.getElementById('errorMessage');
-
-//         function showError(message) {
-//             errorMessage.textContent = message;
-//             errorMessage.style.display = 'block';
-//         }
-
-//         function hideError() {
-//             errorMessage.style.display = 'none';
-//         }
-
-//         function showToast(message, type = 'success') {
-//             Toastify({
-//                 text: message,
-//                 duration: 3000,
-//                 gravity: "top",
-//                 position: "right",
-//                 backgroundColor: type === 'success' ? "#10b981" : "#ef4444",
-//                 stopOnFocus: true,
-//             }).showToast();
-//         }
-
-//         function resetForm() {
-//             form.reset();
-//             hideError();
-//         }
-
-//         async function handleSubmit(e) {
-//             e.preventDefault();
-            
-//             const formData = new FormData(form);
-//             const data = {
-//                 fullName: formData.get('fullName'),
-//                 email: formData.get('email'),
-//                 projectName: formData.get('projectName'),
-//                 mobile: formData.get('mobile'),
-//                 message: formData.get('message')
-//             };
-
-//             // Validation
-//             if (!data.fullName || !data.email || !data.projectName || !data.mobile || !data.message) {
-//                 showError("Please fill all the fields.");
-//                 return;
-//             }
-
-//             const submitBtn = form.querySelector('.submit-btn');
-//             submitBtn.disabled = true;
-//             submitBtn.textContent = 'Sending...';
-
-//             try {
-//                 // Send email via EmailJS
-//                 await emailjs.sendForm(
-//                     "service_yt0vyml", // your service ID
-//                     "template_6djsp2g", // your template ID
-//                     form,
-//                     "Okk9_fQejHdMY_nt7" // your public key
-//                 );
-
-//     //                 // Open WhatsApp with pre-filled message
-//     // const message = `Name: ${data.fullName}%0AEmail: ${data.email}%0AProject Name: ${data.projectName}%0AMobile: ${data.mobile}%0AMessage: ${data.message}`;
-//     // const whatsappURL = `https://wa.me/+14155238886?text=${message}`;
-//     // window.open(whatsappURL, '_blank');
-
-
-//                 showToast("Message sent successfully!");
-//                 resetForm();
-                
-//             } catch (error) {
-//                 console.error("Form submission error:", error);
-//                 showToast("Failed to send message. Please try again.", "error");
-//             } finally {
-//                 submitBtn.disabled = false;
-//                 submitBtn.textContent = 'Send Message →';
-//             }
-//         }
-
-//         form.addEventListener('submit', handleSubmit);
-
-//         // Clear error on input
-//         form.addEventListener('input', hideError);
