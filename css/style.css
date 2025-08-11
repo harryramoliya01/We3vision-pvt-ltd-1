@@ -8434,11 +8434,11 @@ body {
  
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   br{
     display: none;
   }
-}
+} */
 
 .left-section,
 .right-section {
